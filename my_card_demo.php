@@ -1,47 +1,20 @@
-<!--card starts here-->
-         <div class="card">
-
-           <div class="card_left">
-
-<div class="card-img" style="background-image: url('{{ asset('images/vlcsnapa.png') }}');"></div>
-</div>
-
-
-        <div class="card_right">
-               <h1> KILL  BILL:  VOL.  1</h1>
-    <div class="card_right__details">
-       <ul>
-        <li> 2003</li>
-        <li> 111 min</li>
-        <li> Action</li>
-    </ul>
-
-    <div class="card_right__rating">
-       <div class="card_right__rating__stars">
-<div class="tst-rating">
-<i class="test-ion  ion-android-star"></i>
-<i class="test-ion  ion-android-star"></i>
-<i class="test-ion  ion-android-star"></i>
-<i class="test-ion  ion-android-star"></i>
-<i class="test-ion  ion-android-star"></i>
-</div>  
-    </div>  
-    </div> 
-
-    <div class="card_right__review">
- <p> The lead character, called 'The Bride,' was a member <br/> of the Deadly Viper Assassination Squad, led by her <br/> lover 'Bill.' Upon realizing she was pregnant with Bill's<br/> child, 'The Bride' decided to escape her life as a killer.<br/> She fled to Texas, met a young man, who, on the day<br/> of their wedding rehearsal was gunned down by....</p>
- <a href="http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl" target="_blank"> Read more</a>
- <div class="card_right__button">
-<a href="http://www.youtube.com/watch?v=ot6C1ZKyiME" target="_blank"> WATCH TRAILER</a> 
-    </div>
-    </div>
-    </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    
+    <title>My card demo</title>
 
 
-         </div><!--card ends here-->  
 
-
+<style>
          /*styling a cool design*/
 .card {
   width:97%;
@@ -172,9 +145,58 @@
           transition-duration: .5s;
       }
         
-    
-
-
-
-
+  
 /*end of styling a cool design*/
+
+</style>
+     </head>
+  <body>  
+
+<!--card starts here-->
+         <div class="card">
+
+           <div class="card_left">
+
+<div class="card-img" style="background-image: url('vlcsnapa.png');"></div>
+</div>
+
+
+        <div class="card_right">
+               <h1> KILL  BILL:  VOL.  1</h1>
+    <div class="card_right__details">
+       <ul>
+        <li> 2003</li>
+        <li> 111 min</li>
+        <li> Action</li>
+    </ul>
+
+    <div class="card_right__rating">
+       <div class="card_right__rating__stars">
+<div class="tst-rating">
+<i class="test-ion  ion-android-star"></i>
+<i class="test-ion  ion-android-star"></i>
+<i class="test-ion  ion-android-star"></i>
+<i class="test-ion  ion-android-star"></i>
+<i class="test-ion  ion-android-star"></i>
+</div>  
+    </div>  
+    </div> 
+
+    <div class="card_right__review">
+ <p> The lead character, called 'The Bride,' was a member <br/> of the Deadly Viper Assassination Squad, led by her <br/> lover 'Bill.' Upon realizing she was pregnant with Bill's<br/> child, 'The Bride' decided to escape her life as a killer.<br/> She fled to Texas, met a young man, who, on the day<br/> of their wedding rehearsal was gunned down by....</p>
+ <a href="http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl" target="_blank"> Read more</a>
+ <div class="card_right__button">
+<a href="http://www.youtube.com/watch?v=ot6C1ZKyiME" target="_blank"> WATCH TRAILER</a> 
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+         </div><!--card ends here-->  
+
+
+
+
+</body>
+</html>
