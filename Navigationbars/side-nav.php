@@ -25,7 +25,9 @@ body {margin:0; font-family: Myriad-Regular;}
 
 /*---------header navigation top navigatio------------*/
 .navigation {
-  overflow: hidden;
+      position: fixed;
+    z-index: 12;
+  overflow: hidden; 
   height: 48px;
   width: 100%;
   margin: 0;
@@ -85,7 +87,6 @@ margin-top: -15px;*/
 
 ul.menu-nav li {
   display: inline-block;
- 
 }
 ul.menu-nav li a {
   display: block;
@@ -95,6 +96,7 @@ ul.menu-nav li a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+
 }
 
 /*.menu-nav li a:hover{
@@ -109,9 +111,7 @@ ul.menu-nav li a.active {
   color: #fff;
 }
 
-#float-right-on-navbar{
- 
-  }
+
 
 
 .navigation .icon {
@@ -136,12 +136,19 @@ ul.menu-nav li a.active {
 }
 
 ul.custom-dropdown-content {
- display: none;
-  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+ /*display: none;*/
+  position: fixed;
   background-color: #f9f9f9;
   padding: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: -1;
+
+  transform: translateY(2em);
+  transition: all 0.3s;
 }
 
 ul.custom-dropdown-content li {
@@ -169,7 +176,12 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 
 .custom-dropdown:hover ul.custom-dropdown-content {
-  display: block;
+ /* display: block;*/
+ height: auto;
+ visibility: visible; 
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 
 }
 
@@ -190,7 +202,19 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 @media screen and (max-width: 800px) {
 
-ul.menu-nav li, .custom-dropdown .dropbtn {
+.nav_brand .brand_text {
+    font-size: 17px;
+}
+
+ul.menu-nav li{
+     /* display: none; */
+     display: block;
+    visibility: hidden;
+    margin-left: -40px;
+    opacity: 0;
+    transition:visibility 0.2s linear,opacity 0.2s linear;
+}
+ .custom-dropdown .dropbtn {
     display: none;
   }
   .navigation a.icon {
@@ -207,24 +231,27 @@ ul.menu-nav li, .custom-dropdown .dropbtn {
 
 .navigation .menu-nav{
   width: auto;
+  /*these two will help in animation*/
+   max-height: 0;
+  /*transition: max-height 0.5s ease-out;*/
+  transform: translateY(-2em);
+  transition: all 0.3s;
 }
-
-#float-right-on-navbar{
-    float: none!important;
-  }
-
 
 }
 
 @media screen and (max-width: 800px) {
   .menu-nav.responsive {
     position: relative;
-   /* margin: 0;
-    padding: 0;*/
+     /*these two will help in animation*/
+    max-height: 300px; /* make it as big as you think it will ever go */
+    /*transition: max-height 0.5s ease-out;*/
+      transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
   }
   .navigation{
     height: auto;
-    display:block;
+    display:block; 
   }
   .navigation .icon {
     position: absolute;
@@ -232,8 +259,11 @@ ul.menu-nav li, .custom-dropdown .dropbtn {
     top: 0;
   }
   .menu-nav.responsive li{
-    display: block;
+  /* display: block; */
+    visibility: visible;
+    opacity: 1;
     margin-left: -40px;
+      transition:visibility 0.2s linear,opacity 0.2s linear;
   }
 
    .menu-nav.responsive .custom-dropdown ul li{
@@ -260,7 +290,7 @@ ul.menu-nav li, .custom-dropdown .dropbtn {
   width: 260px;
     left: 0;
     bottom: 0;
-    overflow: visible;
+   /* overflow: hidden;*/
     z-index: 10;
    /* transition: width .5s ease;*/
     transition: width 0.5s ease-out;
@@ -484,6 +514,7 @@ margin-left:0px !important;
 
 .main-content-sidebar-closed {
 margin-left: 70px !important;
+transition: margin-left 0.5s ease-out;
 }
 
 
@@ -516,7 +547,30 @@ width: 250px !important;
 @media screen and (max-width: 800px) {
 
 .sidebar {
-display: none;
+  width: 0px !important;
+}
+.sidebar.sidebar-closed {
+ width: 0px !important;
+}
+.nav-brand-left-icon {
+    margin-left: 7px;
+    order: -1; /*becomes the first one in positioning*/
+   }
+   .nav-brand-left .brand-text-left {
+    margin-left: 15px;
+}
+.sidebar-closed-brandtext-left {
+    display: block !important;
+}
+.main-content {
+    margin-left: 0px !important;
+}
+.main-content-sidebar-closed {
+    margin-left: 0px !important;
+  }
+
+  .wrap-content {
+    margin-top: 59px;
 }
 
 }
@@ -528,6 +582,8 @@ display: none;
   margin-top: 0;
   margin-left: 260px;
   min-height: 100%;
+  transition: margin-left 0.5s ease-out;
+      overflow: hidden;
 }
 .wrap-content{
     margin-left: 10px;
@@ -559,10 +615,10 @@ footer{
     color: #ffffff;
         padding: 17px;
         border-top: 1px solid #c8c7cc;
+         position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
-    position: absolute;
     font-size: 12px;
 }
 
@@ -827,7 +883,7 @@ footer{
 </a></li>
 
 </ul>                                                               <!--9783-->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9946;</a>
+  <a href="javascript:void(0);" class="icon nav-brand-right-icon" id="nav-brand-right-icon">&#9946;</a>
 </div>
 
 
@@ -838,6 +894,30 @@ footer{
 <div class="main-content">
   <div class="wrap-content">
   <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+
+    <h2>Responsive Topnav with Dropdown</h2>
   <p>Resize the browser window to see how it works.</p>
   <p>Hover over the dropdown button to open the dropdown menu.</p>
 </div>
@@ -854,23 +934,22 @@ footer{
 
 
 <script>
-function myFunction() {
+document.getElementById('nav-brand-right-icon').onclick = function() {
   var x = document.getElementById("menu-nav");
-  if (x.className === "menu-nav") {
-    x.className += " responsive";
+  if (x.className.match(/responsive/gi)) {
+    x.className = "menu-nav";
   } else {
     x.className = "menu-nav";
+    x.className += " responsive";
   }
+  console.log(this.className);
 }
 </script>
 
 
 <script>
- window.addEventListener(
-  "load",
-  Configer_dropdown,
-  false
-);
+ window.addEventListener("load",Initialise_SideNav,false);
+ window.addEventListener("load",Configer_dropdown,false);
 
 function Configer_dropdown() {
   const customdropdown = document.querySelectorAll('.custom-dropdown-menu');
@@ -878,7 +957,7 @@ function Configer_dropdown() {
   let Sidebar = document.getElementById('sidebar');
   for (var i = 0; i < customdropdown.length; i++) {
       customdropdown[i].onclick = function () {
-        //  console.log(this);//this gets the parent element which event is appended
+          console.log(this);//this gets the parent element which event is appended
     // var dropdowns = this.getElementsByClassName("sub-menu")[0].className = 'sub-menu ';
 
    
@@ -927,6 +1006,13 @@ document.getElementsByClassName('nav-brand-left-icon')[0].classList.remove("side
 document.getElementsByClassName('nav-brand-left')[0].classList.remove("nav-brand-left-sidebar-closed");
 document.getElementsByClassName('navbar-title')[0].classList.remove("navbar-title-sidebar-closed");
 
+//let's perform a check to manage mobile navigation
+if(parseInt(screen.width) <= 800){
+//show navigation and shift content
+ document.getElementsByClassName('sidebar')[0].setAttribute('style', 'width: 260px !important');
+document.getElementsByClassName('main-content')[0].setAttribute('style', 'margin-left: 260px !important');
+}
+
 var Iteminner = document.getElementsByClassName('item-inner');
 for (var i = 0; i < Iteminner.length; i++) {
     Iteminner[i].classList.remove("item-inner-sidebar-closed");
@@ -955,6 +1041,12 @@ document.getElementsByClassName('nav-brand-left-icon')[0].className += " sidebar
 document.getElementsByClassName('nav-brand-left')[0].className += " nav-brand-left-sidebar-closed";
 document.getElementsByClassName('navbar-title')[0].className += " navbar-title-sidebar-closed";
 
+//let's perform a check to manage mobile navigation
+if(parseInt(screen.width) <= 800){
+  //hide navigation
+  document.getElementsByClassName('sidebar')[0].setAttribute('style', 'width: 0px !important');
+  document.getElementsByClassName('main-content')[0].setAttribute('style', 'margin-left: 0px !important');
+}
 var Iteminner = document.getElementsByClassName('item-inner');
 for (var i = 0; i < Iteminner.length; i++) {
     Iteminner[i].className += " item-inner-sidebar-closed";
@@ -979,8 +1071,50 @@ for (var i = 0; i < Submenu.length; i++) {
 
 }
 
+}
 
 
+
+function Initialise_SideNav(){
+
+console.log("Screen resolution is: " + screen.width + "x" + screen.height);
+ let SidebarN = document.getElementById('sidebar');
+//console.log(Sidebar.className);
+//check if device  width or orientation is in mobile format
+console.log(parseInt(screen.width));
+if(parseInt(screen.width) <= 800){
+
+//for adding classes
+//Sidebar.classList.add("sidebar-closed"); //add a class
+SidebarN.className += " sidebar-closed"; // same as first one
+document.getElementsByClassName('main-content')[0].className += " main-content-sidebar-closed";
+document.getElementsByClassName('brand-text-left')[0].className += " sidebar-closed-brandtext-left";
+document.getElementsByClassName('nav-brand-left-icon')[0].className += " sidebar-closed-brand-left-icon";
+document.getElementsByClassName('nav-brand-left')[0].className += " nav-brand-left-sidebar-closed";
+document.getElementsByClassName('navbar-title')[0].className += " navbar-title-sidebar-closed";
+
+var Iteminner_c = document.getElementsByClassName('item-inner');
+for (var i = 0; i < Iteminner_c.length; i++) {
+    Iteminner_c[i].className += " item-inner-sidebar-closed";
+}
+var Itemcontent_c = document.getElementsByClassName('item-content');
+for (var i = 0; i < Itemcontent_c.length; i++) {
+    Itemcontent_c[i].className += " item-content-sidebar-closed";
+}
+
+var Customdropdown_c = document.getElementsByClassName('custom-dropdown-menu');
+for (var i = 0; i < Customdropdown_c.length; i++) {
+    Customdropdown_c[i].className += " custom-dropdown-sidebar-closed";
+    //remove any open class
+    Customdropdown_c[i].classList.remove("open");  
+}
+var Submenu_c = document.getElementsByClassName('sub-menu');
+for (var i = 0; i < Submenu_c.length; i++) {
+    Submenu_c[i].className += " sub-menu-sidebar-closed";
+     //remove any open class
+    Submenu_c[i].classList.remove("open");
+}
+}
 }
 
 
