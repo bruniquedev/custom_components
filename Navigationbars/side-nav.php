@@ -188,7 +188,7 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
     font-size: 12px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
 ul.menu-nav li, .custom-dropdown .dropbtn {
     display: none;
@@ -216,7 +216,7 @@ ul.menu-nav li, .custom-dropdown .dropbtn {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .menu-nav.responsive {
     position: relative;
    /* margin: 0;
@@ -418,7 +418,7 @@ ul.sub-menu li {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1px !important;
+    margin-top: 1px;
     padding: 0;
 
 }
@@ -429,12 +429,12 @@ ul.sub-menu > li a {
 ul.sub-menu li a {
     background: none;
     display: block;
-    font-size: 13px !important;
+    font-size: 13px;
     font-weight: 300;
     border: none;
     margin: 0;
     padding-bottom: 5px;
-    padding-left: 52px !important;
+    padding-left: 52px;
     padding-right: 15px;
     padding-top: 5px;
     text-decoration: none;
@@ -490,7 +490,13 @@ margin-left: 70px !important;
 
 .sub-menu-sidebar-closed{
 position: absolute !important;
-/*width: 100%;*/
+    margin-top: -46px !important;
+    margin-left: 60px !important;
+
+}
+
+ul.sub-menu-sidebar-closed li a{
+  padding-left: 7px !important;
 }
 
 /*.custom-dropdown-sidebar-closed:hover  ul.sub-menu-sidebar-closed {*/
@@ -499,12 +505,23 @@ position: absolute !important;
  /* display: block !important;*/
  /* shows sub-menu */
 height: auto !important;
+width: 250px !important;
  visibility: visible !important; 
   opacity: 1 !important;
-  /*transform: translateY(0%) !important;*/
+  transform: translateY(0%) !important;
   transition-delay: 0s, 0s, 0.3s !important; /* this removes the transition delay so the menu will be visible while the other styles transition */
 
 }
+
+@media screen and (max-width: 800px) {
+
+.sidebar {
+display: none;
+}
+
+}
+
+
 
 /*main content area*/
 .main-content{
@@ -606,7 +623,7 @@ footer{
   <ul class="sub-menu">
     <li>
       <a href="#">
-        <span class="title">Link 1</span>
+        <span class="title">Sekibengo geofrey bruno</span>
       </a>
     </li>
     <li>
@@ -658,7 +675,7 @@ footer{
   <ul class="sub-menu">
     <li>
       <a href="#">
-        <span class="title">Link 1</span>
+        <span class="title">Sekibengo geofrey bruno</span>
       </a>
     </li>
     <li>
@@ -858,6 +875,7 @@ function myFunction() {
 function Configer_dropdown() {
   const customdropdown = document.querySelectorAll('.custom-dropdown-menu');
   const openDropdown = document.querySelectorAll('.sub-menu');
+  let Sidebar = document.getElementById('sidebar');
   for (var i = 0; i < customdropdown.length; i++) {
       customdropdown[i].onclick = function () {
         //  console.log(this);//this gets the parent element which event is appended
@@ -869,6 +887,9 @@ function Configer_dropdown() {
    // console.log(c);
     let cd = this.className;//parent class with event//custom-dropdown-menu
     //console.log(cd);
+    //let's first check side bar is closed, such that we don't expand it on click
+    let Sidebar_C = Sidebar.className;
+     if(!Sidebar_C.match(/sidebar-closed/gi)){//if not matching sidebar-closed
     if(c.match(/open/gi)){
      c = "sub-menu";//remove open class and add sub-menu class
      cd="custom-dropdown-menu";
@@ -884,6 +905,7 @@ function Configer_dropdown() {
          }
     this.getElementsByClassName("sub-menu")[0].className = c;
      this.className = cd; //set class with event//custom-dropdown-menu
+   }
     }
   }
   }
@@ -945,10 +967,14 @@ for (var i = 0; i < Itemcontent.length; i++) {
 var Customdropdown = document.getElementsByClassName('custom-dropdown-menu');
 for (var i = 0; i < Customdropdown.length; i++) {
     Customdropdown[i].className += " custom-dropdown-sidebar-closed";
+    //remove any open class
+    Customdropdown[i].classList.remove("open");  
 }
 var Submenu = document.getElementsByClassName('sub-menu');
 for (var i = 0; i < Submenu.length; i++) {
     Submenu[i].className += " sub-menu-sidebar-closed";
+     //remove any open class
+    Submenu[i].classList.remove("open");
 }
 
 }
