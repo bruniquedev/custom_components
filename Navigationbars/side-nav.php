@@ -27,6 +27,7 @@ body {margin:0; font-family: Myriad-Regular;}
 .navigation {
       position: fixed;
     z-index: 12;
+        top: 0px;
   overflow: hidden; 
   height: 48px;
   width: 100%;

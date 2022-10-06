@@ -23,7 +23,10 @@
 body {margin:0; font-family: Myriad-Regular;}
 
 .navigation {
+      position: fixed;
+  z-index: 12;
   overflow: hidden;
+  top: 0px;
   height: 48px;
   width: 100%;
   margin: 0;
@@ -114,12 +117,19 @@ ul.menu-nav li a.active {
 }
 
 ul.custom-dropdown-content {
- display: none;
-  position: absolute;
+    overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+ /*display: none;*/
+  position: fixed;
   background-color: #f9f9f9;
   padding: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+
+    transform: translateY(2em);
+  transition: all 0.3s;
 }
 
 ul.custom-dropdown-content li {
@@ -147,7 +157,12 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 
 .custom-dropdown:hover ul.custom-dropdown-content {
-  display: block;
+   /* display: block;*/
+ height: auto;
+ visibility: visible; 
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 
 }
 
@@ -229,7 +244,16 @@ width: 225px;
 
 @media screen and (max-width: 600px) {
 
-ul.menu-nav li, .custom-dropdown .dropbtn, .nav_social_brands {
+ul.menu-nav li{
+        /* display: none; */
+     display: block;
+    visibility: hidden;
+    margin-left: -40px;
+    opacity: 0;
+    transition:visibility 0.2s linear,opacity 0.2s linear;
+}
+
+ .custom-dropdown .dropbtn, .nav_social_brands {
     display: none;
   }
   .navigation a.icon {
@@ -243,6 +267,18 @@ ul.menu-nav li, .custom-dropdown .dropbtn, .nav_social_brands {
     display: block;
 
   }
+
+.navigation .menu-nav{
+  width: auto;
+
+         /*these two will help in animation*/
+   max-height: 0;
+  /*transition: max-height 0.5s ease-out;*/
+  transform: translateY(-2em);
+  transition: all 0.3s;
+}
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -250,6 +286,12 @@ ul.menu-nav li, .custom-dropdown .dropbtn, .nav_social_brands {
     position: relative;
    margin: 0;
     /* padding: 0;*/
+
+        /*these two will help in animation*/
+    max-height: 100%; /* make it as big as you think it will ever go */
+    /*transition: max-height 0.5s ease-out;*/
+      transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
   }
   .navigation{
     height: auto;
@@ -262,8 +304,11 @@ ul.menu-nav li, .custom-dropdown .dropbtn, .nav_social_brands {
     top: 0;
   }
   .menu-nav.responsive li{
-    display: block;
+  /* display: block; */
+    visibility: visible;
+    opacity: 1;
     margin-left: -40px;
+      transition:visibility 0.2s linear,opacity 0.2s linear;
   }
   .nav_social_brands.show_social_nav{
     display: block;
@@ -334,7 +379,7 @@ ul.menu-nav li, .custom-dropdown .dropbtn, .nav_social_brands {
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<div style="padding-left:16px">
+<div style="padding-left:16px; margin-top:70px;">
   <h2>Responsive Topnav with Dropdown</h2>
   <p>Resize the browser window to see how it works.</p>
   <p>Hover over the dropdown button to open the dropdown menu.</p>
