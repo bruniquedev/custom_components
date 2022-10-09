@@ -284,8 +284,6 @@ padding: 0px;
     width: 0%;
     height: 100%;
         z-index: 13;
-    overflow: hidden;
-    background-color: #FFF;
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
@@ -295,9 +293,22 @@ padding: 0px;
   .responsive-nav.responsive {
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
+        overflow-x: hidden;
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%);
+  }
+
+  .navigation.shadow:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 11;
   }
 
 .responsive-nav .menu-nav{
@@ -350,6 +361,7 @@ background-size: cover;
   border-color: #333;
 opacity: 1;
 border-radius: 1px;
+height: 60px;
 /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
 box-shadow: 0px 4px 4px #ddd !important;
 }
@@ -513,16 +525,19 @@ box-shadow: 0px 4px 4px #ddd !important;
 
 <script>
 function myFunction() {
+  var n = document.getElementById("navigation");
   var x = document.getElementById("responsive-nav");
-    var s = document.getElementById("nav_social_brands");
-
+  //  var s = document.getElementById("nav_social_brands");
+   
   
   if (x.className === "responsive-nav") {
     x.className += " responsive";
-    s.className +=" show_social_nav";
+    n.className += " shadow";
+   // s.className +=" show_social_nav";
   } else {
     x.className = "responsive-nav";
-    s.className ="nav_social_brands";
+    n.className = "navigation";
+   // s.className ="nav_social_brands";
   }
 }
 </script>
