@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../ionicons/css/ionicons.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.buttonload {
+  background-color: #04AA6D; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 24px; /* Some padding */
+  font-size: 16px; /* Set a font-size */
+
+
+}
+
+/* Add a right margin to each icon */
+.ion {
+  margin-left: -12px;
+  margin-right: 8px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+<h2>Loading Buttons</h2>
+
+<button class="buttonload">
+  <i class="ion ion-ios-reload"></i>Loading
+</button>
+
+<button class="buttonload">
+  <i class="ion ion-refresh"></i>Loading
+</button>
+
+<button class="buttonload">
+  <i class="ion ion-android-sync"></i>Loading
+</button>
+
+</body>
+</html>

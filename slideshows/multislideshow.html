@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../ionicons/css/ionicons.min.css" />
+<style>
+
+  body{
+  background:#353b45 !important;
+  font-family:'Poppins';
+}
+.flt-left{
+  float:left;
+}
+.carousel{
+  width:100%;
+  margin:auto;
+}
+.row{
+  width:90%;
+  padding:0;
+  overflow:hidden;
+  margin:auto;
+}
+.row-container{
+  width:2000px;
+  transition:0.5s;
+}
+.container{
+  width:250px;
+  
+  float:left;
+  display:inline;
+  margin:0 5px;
+}
+.clear{
+  clear:both;
+}
+.controls{
+  width:100%;
+  margin:auto;
+}
+button{
+  border:none;
+  padding:10px 20px;
+  color:white;
+  background:#21252b;
+  font-weight:bold;
+  outline:none;
+  border-radius:3px;
+  height:200px;
+  postion:relative;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="carousel">
+  <button class='flt-left' onclick="slideRight(this);"><i class="ion-android-arrow-dropleft-circle  slider-nav-icon" aria-hidden="true"></i></button>
+  <div class="row flt-left">
+    
+   <div class="row-container">
+  <div class="container">
+    <img src="img_5terre_wide.jpg" />
+  </div>
+  <div class="container">
+    <img src="img_lights_wide.jpg" />
+  </div>
+  <div class="container">
+    <img src="img_mountains_wide.jpg" />
+  </div>
+      <div class="container">
+    <img src="img_nature_wide.jpg" />
+  </div>
+     <div class="container">
+    <img src="img_snow_wide.jpg" />
+  </div>
+     <div class="container">
+    <img src="img_woods_wide.jpg" />
+  </div>
+    <div class="clear"></div>
+    </div>
+   
+    </div>
+   <button class='flt-left'  onclick="slideLeft(this);"><i class="ion-android-arrow-dropright-circle  slider-nav-icon" aria-hidden="true"></i></button>
+    <div class="clear"></div>
+</div>
+
+
+
+
+
+<script>
+/*
+Author : Mohd Shibli
+Year : 2017
+*/
+
+var right = 0;
+var maxMargin;
+var jumpMargin = 150;
+
+function setWidth(){
+  var boxwidth = document.querySelector(".container").offsetWidth;
+  var displaywidth = document.querySelector(".row").offsetWidth;
+  var displayheight = document.querySelector(".row").offsetHeight;
+  var children = document.querySelectorAll(".row-container > .container").length;
+  var outerboxwidth = children * boxwidth + (children*10);
+  document.querySelector(".row-container").style.width = outerboxwidth+"px";
+  document.querySelectorAll("button")[0].style.height = displayheight+"px";
+  document.querySelectorAll("button")[1].style.height = displayheight+"px";
+  maxMargin = outerboxwidth - displaywidth;
+}
+
+function slideLeft(event){
+  var rowcont = document.querySelector(".row-container");
+  if(right <= -maxMargin){
+    event.preventDefault();
+  }
+  else{
+    right -= jumpMargin;
+  }
+   rowcont.style.marginLeft = right+"px";
+}
+
+function slideRight(event){
+  var rowcont = document.querySelector(".row-container");
+  if(right==0){
+    event.preventDefault();
+  }
+  else if(right >= maxMargin){
+    event.preventDefault();
+  }
+  else{
+     right += jumpMargin;
+  }
+  rowcont.style.marginLeft = right+"px";
+}
+
+window.onload=setWidth;
+</script>
+</body>
+</html> 
