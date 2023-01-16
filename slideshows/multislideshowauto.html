@@ -67,7 +67,7 @@ align-items: center;
     right: 0px;
 }
 
-i.slider-nav-icon{
+i.multislider-nav-icon{
  font-size: 22px; 
    fill: #002640;
   padding-left: 5px;
@@ -112,9 +112,9 @@ i.slider-nav-icon{
     </div>
 
     <a href="#" class="multisliderbtn left-controlbtn" id="left-controlbtn"
- onclick="slideRight(this);"><i class="ion-android-arrow-dropleft-circle  slider-nav-icon" aria-hidden="true"></i></a>
+ onclick="slideRight(this);"><i class="ion-android-arrow-dropleft-circle  multislider-nav-icon" aria-hidden="true"></i></a>
 
-   <a href="#" class="multisliderbtn right-controlbtn" id="right-controlbtn" onclick="slideLeft(this);"><i class="ion-android-arrow-dropright-circle  slider-nav-icon" aria-hidden="true"></i></a>
+   <a href="#" class="multisliderbtn right-controlbtn" id="right-controlbtn" onclick="slideLeft(this);"><i class="ion-android-arrow-dropright-circle  multislider-nav-icon" aria-hidden="true"></i></a>
     <div class="clear"></div>
 </div>
 
@@ -127,7 +127,7 @@ i.slider-nav-icon{
 Author : Mohd Shibli
 Year : 2017
 */
-
+ window.addEventListener("load",InitialiseMultislider,false);
 var right = 0;
 var maxMargin;
 var jumpMargin = 150;
@@ -242,7 +242,7 @@ clearTimeout(multicarouseltimeout);
  // console.log(right);
 }
 
-window.onload=InitialiseMultislider;
+//window.onload=InitialiseMultislider;
 </script>
 </body>
 </html> 
