@@ -56,7 +56,7 @@
 <li><a  href="/userlogout">Log out</a></li>
 
 
-<li ><a href="/eshop-search"><i  id="search-icon" class="ion-android-search"></i> Search here..</a></li>
+<li ><a href="javascript:void(0);" class="search-web-app"><i  id="search-icon" class="ion-android-search"></i> Search here..</a></li>
 
 <li  class="shopping-bag-btn"><a href="javascript:void(0);">
 <i  id="cart-icon" class="ion-android-cart"></i> My cart  <span id="cartbadge" 
@@ -146,7 +146,7 @@ class="badge_count mycart_product_count">5</span>
                       <div class="clearfix"></div>
                     </div>
                   </div>
-                  <button type="submit" class="submit-login btn mb-4">Sign In</button>
+                  <button type="submit" class="submit-login btn-custom mb-4">Sign In</button>
 
                 </form>
                 <!--//login-form-->
@@ -154,3 +154,50 @@ class="badge_count mycart_product_count">5</span>
               <!---->
             </div>
           </div>
+
+
+
+
+          <!--search pop-->
+
+           <div id="search_bar_container" class="pop-overlay">
+              <div class="popup">
+
+                <form action="#" method="post" class="search-box-form">
+                  <input type="search" placeholder="Keyword" name="search" required="required" autofocus="">
+                  <button type="submit" class="btn-custom">Search</button>
+                </form>
+
+              </div>
+              <a class="close close-searchbar" href="javascript:void(0);">×</a>
+            </div>
+
+          <!--/search popup-->
+
+          <!--right side bar-->
+          <div id="rightside-sidebar">
+  <div id="rsideBar" class="r-side-bar">
+        <div class="rsidebar-btns">
+        <a href="https://bruniquedevelopers.com">
+            <span class="rside-icon">
+                <span class="ion ion-arrow-left-a"></span>
+            </span>
+            <span class="rside-text">Back</span>
+        </a>
+        <a href="https://bruniquedevelopers.com">
+            <span class="rside-icon">
+                <span class="ion ion-android-download"></span>
+            </span>
+            <span class="rside-text">Download</span>
+        </a>
+        <a href="https://bruniquedevelopers.com">
+            <span class="rside-icon">
+                <span class="ion ion-android-cart"></span>
+            </span>
+            <span class="rside-text">Buy</span>
+        </a>
+    </div>
+    
+    </div>
+          </div>
+          <!--/right side bar-->
