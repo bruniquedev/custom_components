@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>seat4</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style type="text/css">
       
       #room {
@@ -24,6 +26,7 @@
 }
 
     </style>
+
   </head>
   <body>
 
@@ -33,22 +36,22 @@
 
     <script type="text/javascript">
       
-var $chair = '<div class="chair">';
-var $room = document.getElementById('room');
+var $chair = $('<div class="chair">');
+var $room = $('#room');
 var top = 0;
 var left = 0;
 var stepSize = 20;
 
 var createChairs = function(amount) {
   for (var i = 0; i < amount; i++) {
-     var newChair = $chair.cloneNode(true);
-    // newChair.css({top: top, left: left});
-     $room.appendChild(newChair);
+     var newChair = $chair.clone();
+     newChair.css({top: top, left: left});
+     $room.append(newChair);
      left = left + stepSize;
   }
 }
 
-createChairs(1);
+createChairs(10);
 
     </script>
   </body>
