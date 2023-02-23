@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<title>home 4</title>
+<title>About or service  example</title>
 <style>
 
 body{
@@ -177,24 +177,15 @@ a{
 
 
 
-.slide-personal-services{
-z-index: 5; 
-transform: translate3d(0px, 0px, 0px);
-}
-
 
 .services-sec .serv-img {
     transition: all linear .4s;
-    background: url(images/banner1.jpg) no-repeat;
     background-repeat: no-repeat !important;
     background-size: cover;
-    /* background-size: 110% 110%;*/
     background-position: center center !important;
     padding: 0 !important;
     align-items: normal;
-    /*animation: servicesimages 20s infinite !important;
-    animation: shrink 5s infinite alternate !important;*/
-     animation: shrink 20s linear infinite !important;
+    animation: servicesimages 20s infinite !important;
 }
 .slide-container {
     overflow: hidden;
@@ -203,16 +194,12 @@ transform: translate3d(0px, 0px, 0px);
     width: 100%;
     height: 100vh;
     min-height: 100%;
-    display: flex;
-    align-items: center;
-    padding-top: 7.75rem;
-    position: relative;
+   
 }
 
 
 .services-sec .service {
     text-align: left;
-    position: relative;
     border-right: 2px solid #fff;
     overflow: hidden;
 }
@@ -221,15 +208,10 @@ transform: translate3d(0px, 0px, 0px);
     position: absolute;
     bottom: 0;
     padding: 35px;
-    background-color: rgba(255, 255, 255,0.7);
+   background-color: #fff;
 }
 
-.services-sec .service .service-text .serv-head {
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5rem;
-     display: none;
-}
+
 .services-sec .service .service-text h2, .services-sec .service .service-text p {
     margin: 0;
 }
@@ -242,48 +224,25 @@ transform: translate3d(0px, 0px, 0px);
 }
 
 .services-sec .service .service-text .ser-para {
-    visibility: hidden;
-    height: 0;
+    visibility: visible;
+    height: auto;
     overflow: hidden;
     font-size: 1.15rem;
-        text-shadow: 1px 1px 1px rgb(255 255 255 / 10%);
+    text-shadow: 1px 1px 1px rgb(255 255 255 / 10%);
     margin-bottom: 6px;
+    /*background: rgb(251 251 251 / 99%);
+    color: rgb(0 0 0 / 100%);
+    padding: 8px;
+    border-radius: 2px;*/
 }
 
 .servicemore {
     color: #000;
     text-align: center;
     /* display: none; */
+    margin-top: 5px;
 }
 
-.services-sec .service .servicewhitebg {
-    width: 100%;
-    height: 50%;
-    left: 0 !important;
-    bottom: 0 !important;
-    top: auto;
-    right: auto;
-    /*background: #fff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 100%);*/
-    position: absolute;
-    z-index: -10;
-    transition: all linear .2s;
-}
-.transformLeft, .transformRight {
-    transform: translate(0, 0);
-    opacity: 0.6;
-}
-
-.slide-photo {
-    position: absolute !important;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
 
 .col-box {
     -ms-flex: 0 0 25%;
@@ -291,46 +250,10 @@ transform: translate3d(0px, 0px, 0px);
     max-width: 25%;
 }
 
-.col-box:hover .service-text .ser-para{
- visibility: visible !important;
-    height: auto !important;
-}
 
 
 
-/* has effect with eyes
-@keyframes shrink {
-  0%   { background-size: 100% auto; }
-  50% { background-size: 140% auto; }
-  100% { background-size: 100% auto; }
-}*/
 
-@keyframes shrink {
-  0% {
-    background-size: 110% auto;
-  }
-    50% { background-size: 140% auto; }
-  100% {
-    background-size: 100% auto;
-  }
-}
-
-
-/*
-.zoom-in-out-box {
-  animation: zoom-in-zoom-out 5s ease infinite !important;
-}
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}*/
 
 
 
@@ -454,86 +377,27 @@ padding: 6px 12px;
 <div id="services" class="slide-personal-services services-sec">
         <div class="slide-container serv-img" style="background: url(images/banner4.jpg);">
 		  
-          <div class="col-box service service-1" >
+          <div class="service service-1">
             <div class="service-text servicetext" >
-              <p class="serv-head serviceimage" >
-              	<img alt="" src="images/banner4.jpg" class="service-img"/></p>
               <h2 class="" >Skilled Nursing</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br> </p>
+               <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br> </p>
+                <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br> </p>
+                 <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br> </p>
+				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i>Read More...</span></a>
             </div>
-            <div class="slide-photo servicewhitebg transformLeft"></div>
+          
           </div>
 
-          <div class="col-box service service-2" >
-            <div class="service-text servicetext " >
-              <p class="serv-head  serviceimage" >
-              	<img alt="" src="images/banner1.jpg"  class="service-img" /></p>
-              <h2 >Physical Therapy</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
- </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
-            </div>
-            <div class="slide-photo servicewhitebg transformLeft"></div>
-          </div>
+    
 
-          <div class="col-box service service-3" >
-            <div class="service-text servicetext" >
-              <p class="serv-head serviceimage" >
-              	<img alt="" src="images/banner4.jpg" class="service-img"/></p>
-              <h2 class="" >Medical Supplies</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span> </a>
-            </div>
-            <div class="slide-photo servicewhitebg transformLeft"></div>
-          </div>
 
-          <div class="col-box service service-4" >
-            <div class="service-text servicetext" >
-              <p class="serv-head serviceimage" >
-              	<img alt="" src="images/banner1.jpg" class="service-img" /></p>
-              <h2  >Home Health Aid</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
-<br>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
-            </div>
-            <div class="slide-photo servicewhitebg transformLeft"></div>
-          </div>
-			  
-		  
         </div>
       </div>
 
 
 </div>
 
-
-
-<script type="text/javascript">
-    
-if(document.getElementsByClassName("col-box")!=null){
-
-  var services = document.getElementsByClassName("col-box");
-  //serv-img
-
-  for (var i = 0; i < services.length; i++) {
-    services[i].onmouseover = function () {
-      
-var target = this;
-
-var src = this.getElementsByClassName('service-img')[0].getAttribute('src');
-//console.log(src);
-document.getElementsByClassName('serv-img')[0].style.backgroundImage = "url("+src+")";
-document.getElementsByClassName('serv-img')[0].classList.add("zoom-in-out-box");
-};
-}
-}
-
-
-
-</script>
 
 
 
