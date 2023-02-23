@@ -218,7 +218,7 @@ transform: translate3d(0px, 0px, 0px);
     position: absolute;
     bottom: 0;
     padding: 35px;
-    background-color: rgba(255, 255, 255,0.6);
+    background-color: rgba(255, 255, 255,0.7);
 }
 
 .services-sec .service .service-text .serv-head {
@@ -243,6 +243,8 @@ transform: translate3d(0px, 0px, 0px);
     height: 0;
     overflow: hidden;
     font-size: 1.15rem;
+        text-shadow: 1px 1px 1px rgb(255 255 255 / 10%);
+    margin-bottom: 6px;
 }
 
 .servicemore {
@@ -286,7 +288,10 @@ transform: translate3d(0px, 0px, 0px);
     max-width: 25%;
 }
 
-
+.col-box:hover .service-text .ser-para{
+ visibility: visible !important;
+    height: auto !important;
+}
 
 
 
@@ -323,6 +328,43 @@ transform: translate3d(0px, 0px, 0px);
     border-color: #b3e59f;
     box-shadow: none !important;
 }
+
+
+.btn-default-custom {
+    color: #000;
+    background-color: #fff;
+    border-color: #ccc;
+padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+        border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    background-repeat: repeat-x;
+        text-shadow: 0 -1px 0 rgb(0 0 0 / 20%);
+    -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+}
+.btn-default-custom:focus, .btn-default-custom:hover {
+    background-color: #e0e0e0;
+    background-position: 0 -15px;
+}
+
 
 .justify-content-center {
     -ms-flex-pack: center!important;
@@ -379,10 +421,10 @@ transform: translate3d(0px, 0px, 0px);
           <div class="col-box service service-1" style="visibility: visible;">
             <div class="service-text servicetext" style="visibility: visible;">
               <p class="serv-head serviceimage" style="visibility: visible;">
-              	<img alt="" src="images/banner1.jpg"></p>
+              	<img alt="" src="images/banner1.jpg" class="service-img"/></p>
               <h2 class="" style="visibility: visible;">Skilled Nursing</h2>
               <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+				<a href="javascript:void()" class="servicemore btn-default-custom" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
@@ -390,12 +432,12 @@ transform: translate3d(0px, 0px, 0px);
           <div class="col-box service service-2" style="visibility: visible;">
             <div class="service-text servicetext " style="visibility: visible;">
               <p class="serv-head  serviceimage" style="visibility: visible;">
-              	<img alt="" src="images/left3.jpg" /></p>
+              	<img alt="" src="images/left3.jpg"  class="service-img" /></p>
               <h2 style="visibility: visible;">Physical Therapy</h2>
               <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
  </p>
-				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+				<a href="javascript:void()" class="servicemore btn-default-custom" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
@@ -403,10 +445,10 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
           <div class="col-box service service-3" style="visibility: visible;">
             <div class="service-text servicetext" style="visibility: visible;">
               <p class="serv-head serviceimage" style="visibility: visible;">
-              	<img alt="" src="images/shop-1.jpg"></p>
+              	<img alt="" src="images/shop-1.jpg" class="service-img"/></p>
               <h2 class="" style="visibility: visible;">Medical Supplies</h2>
               <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span> </a>
+				<a href="javascript:void()" class="servicemore btn-default-custom" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span> </a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
@@ -414,12 +456,12 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
           <div class="col-box service service-4" style="visibility: visible;">
             <div class="service-text servicetext" style="visibility: visible;">
               <p class="serv-head serviceimage" style="visibility: visible;">
-              	<img alt="" src="images/shop-11.jpg"></p>
+              	<img alt="" src="images/shop-11.jpg" class="service-img" /></p>
               <h2  style="visibility: visible;">Home Health Aid</h2>
               <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
 <br>
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+				<a href="javascript:void()" class="servicemore btn-default-custom" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
@@ -431,6 +473,31 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 </div>
 
+
+
+<script type="text/javascript">
+    
+if(document.getElementsByClassName("col-box")!=null){
+
+  var services = document.getElementsByClassName("col-box");
+  //serv-img
+
+  for (var i = 0; i < services.length; i++) {
+    services[i].onmouseover = function () {
+      
+var target = this;
+
+var src = this.getElementsByClassName('service-img')[0].getAttribute('src');
+//console.log(src);
+document.getElementsByClassName('serv-img')[0].style.backgroundImage = "url("+src+")";
+
+};
+}
+}
+
+
+
+</script>
 
 
 
