@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<title>home 3</title>
+<title>home 4</title>
 <style>
 
 body{
@@ -177,9 +177,15 @@ a{
 
 
 
+.slide-personal-services{
+z-index: 5; 
+transform: translate3d(0px, 0px, 0px);
+}
+
 
 .services-sec .serv-img {
     transition: all linear .4s;
+    background: url(images/banner1.jpg) no-repeat;
     background-repeat: no-repeat !important;
     background-size: cover;
     background-position: center center !important;
@@ -212,7 +218,7 @@ a{
     position: absolute;
     bottom: 0;
     padding: 35px;
-    background-color: rgba(255, 255, 255,0.8);
+    background-color: rgba(255, 255, 255,0.6);
 }
 
 .services-sec .service .service-text .serv-head {
@@ -233,23 +239,16 @@ a{
 }
 
 .services-sec .service .service-text .ser-para {
-    visibility: visible;
-    height: auto;
+    visibility: hidden;
+    height: 0;
     overflow: hidden;
     font-size: 1.15rem;
-    text-shadow: 1px 1px 1px rgb(255 255 255 / 10%);
-    margin-bottom: 6px;
-    /*background: rgb(251 251 251 / 99%);
-    color: rgb(0 0 0 / 100%);
-    padding: 8px;
-    border-radius: 2px;*/
 }
 
 .servicemore {
     color: #000;
     text-align: center;
     /* display: none; */
-    margin-top: 5px;
 }
 
 .services-sec .service .servicewhitebg {
@@ -325,43 +324,6 @@ a{
     box-shadow: none !important;
 }
 
-
-.btn-default-custom {
-    color: #000;
-    background-color: #fff;
-    border-color: #ccc;
-padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-        border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  
-    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
-    background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
-    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
-    background-repeat: repeat-x;
-        text-shadow: 0 -1px 0 rgb(0 0 0 / 20%);
-    -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
-}
-.btn-default-custom:focus, .btn-default-custom:hover {
-    background-color: #e0e0e0;
-    background-position: 0 -15px;
-}
-
-
 .justify-content-center {
     -ms-flex-pack: center!important;
     justify-content: center!important;
@@ -414,44 +376,53 @@ padding: 6px 12px;
 <div id="services" class="slide-personal-services services-sec">
         <div class="slide-container serv-img" style="background: url(images/banner4.jpg);">
 		  
-          <div class="col-box service service-1">
-            <div class="service-text servicetext" >
-              <h2 class="" >Skilled Nursing</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br> </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i>Read More...</span></a>
+          <div class="col-box service service-1" style="visibility: visible;">
+            <div class="service-text servicetext" style="visibility: visible;">
+              <p class="serv-head serviceimage" style="visibility: visible;">
+              	<img alt="" src="images/banner1.jpg"></p>
+              <h2 class="" style="visibility: visible;">Skilled Nursing</h2>
+              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
 
-          <div class="col-box service service-2" >
-            <div class="service-text servicetext " >
-              <h2 >Physical Therapy</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br>
+          <div class="col-box service service-2" style="visibility: visible;">
+            <div class="service-text servicetext " style="visibility: visible;">
+              <p class="serv-head  serviceimage" style="visibility: visible;">
+              	<img alt="" src="images/left3.jpg" /></p>
+              <h2 style="visibility: visible;">Physical Therapy</h2>
+              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
  </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
 
-          <div class="col-box service service-3" >
-            <div class="service-text servicetext" >
-              <h2 class="" >Medical Supplies</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span> </a>
+          <div class="col-box service service-3" style="visibility: visible;">
+            <div class="service-text servicetext" style="visibility: visible;">
+              <p class="serv-head serviceimage" style="visibility: visible;">
+              	<img alt="" src="images/shop-1.jpg"></p>
+              <h2 class="" style="visibility: visible;">Medical Supplies</h2>
+              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span> </a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
 
-          <div class="col-box service service-4" >
-            <div class="service-text servicetext" >
-              <h2  >Home Health Aid</h2>
-              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. <br></p>
-				<a href="javascript:void()" class="servicemore btn-default-custom" ><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
+          <div class="col-box service service-4" style="visibility: visible;">
+            <div class="service-text servicetext" style="visibility: visible;">
+              <p class="serv-head serviceimage" style="visibility: visible;">
+              	<img alt="" src="images/shop-11.jpg"></p>
+              <h2  style="visibility: visible;">Home Health Aid</h2>
+              <p class="ser-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<a href="javascript:void()" class="servicemore" style="visibility: visible;"><span class="moredetails"><i class="lni lni-plus"></i> More Details</span></a>
             </div>
             <div class="slide-photo servicewhitebg transformLeft"></div>
           </div>
-
-
 			  
 		  
         </div>
