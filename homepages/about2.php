@@ -454,7 +454,12 @@ li.nav-item:hover .dropdown-menu{
 
 /*testimonials*/
 .customers-sec-6{
-    margin: 50px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+        align-items: center;
+    justify-content: space-between;  
+    margin: 10px;
 }
 
 .col-medium-3 {
@@ -483,15 +488,15 @@ li.nav-item:hover .dropdown-menu{
     color: #d4d1d1;
     margin-top: 16px;
 }
+
 .customers-sec-6 .feedback-hny:after {
-    border-color: transparent;
-    border-top-color: #232020;
-    border-width: 10px;
-    margin-left: -10px;
-}
-.customers-sec-6 .feedback-hny:after {
+
     top: 100%;
     left: 50%;
+    border-color: transparent !important;
+    border-top-color: #232020 !important;
+    border-width: 10px !important;
+    margin-left: -10px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -640,6 +645,38 @@ li.nav-item:hover .dropdown-menu{
 
 
 <section class="customers-sec-6">
+
+<div class="col-medium-3">
+<div class="customer-info text-center">
+<div class="feedback-hny">
+<span class="ion ion-quote"></span>
+<p class="feedback-para">Lorem, ipsum dolor sit amet consectetur
+adipisicing elit. Labore rem, dicta assumenda mollitia molestias
+quas nihil quasis.</p>
+</div>
+<div class="feedback-review mt-4">
+<img src="images/c2.jpg" class="img-fluid" alt="">
+<h5>Lora Grill</h5>
+
+</div>
+</div>
+</div>
+
+<div class="col-medium-3">
+<div class="customer-info text-center">
+<div class="feedback-hny">
+<span class="ion ion-quote"></span>
+<p class="feedback-para">Lorem, ipsum dolor sit amet consectetur
+adipisicing elit. Labore rem, dicta assumenda mollitia molestias
+quas nihil quasis.</p>
+</div>
+<div class="feedback-review mt-4">
+<img src="images/c2.jpg" class="img-fluid" alt="">
+<h5>Lora Grill</h5>
+
+</div>
+</div>
+</div>
 
 <div class="col-medium-3">
 <div class="customer-info text-center">
