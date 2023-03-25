@@ -188,7 +188,7 @@ font-size: 25px !important;
     align-self: flex-start;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 580px){
 
 .u-home-container {
  height: 580px;   

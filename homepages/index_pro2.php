@@ -247,7 +247,7 @@ font-weight: 700;
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 580px){
 .custom-card-item {
     width: 100% !important;
 }
