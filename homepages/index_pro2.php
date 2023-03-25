@@ -247,7 +247,41 @@ font-weight: 700;
 }
 
 
+@media screen and (max-width: 480px){
+.custom-card-item {
+    width: 100% !important;
+}
 
+.info_row_item_1,.info_row_item {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.info_item_content {
+    padding: 30px;
+
+}
+.info_row_item .info_item_content{
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width: 1000px){
+
+.info_row_item_1,.info_row_item {
+    max-width: 100%;
+    min-width: 100%;
+}
+.info_row_item .info_item_content{
+    padding-top: 0px;
+}
+
+.custom-card-item {
+    width: 40%;
+}
+
+    }
 
 </style>
 </head>
