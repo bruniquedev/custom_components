@@ -32,7 +32,7 @@ body{
     margin: 0px;
     padding: 0px;
     /*font-family: 'Lato', sans-serif;*/
-        font-family: sans-serif;
+        font-family: Myriad-Regular;
     font-size: 12px;
     color: #303030;
 }
