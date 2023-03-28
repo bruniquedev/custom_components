@@ -33,7 +33,8 @@ body{
     padding: 0px;
     /*font-family: 'Lato', sans-serif;*/
         font-family: Myriad-Regular;
-    font-size: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .top-nav-dashb {
@@ -78,10 +79,122 @@ body{
     justify-content: center;
 }
 
+.center{
+    text-align: center;
+}
+
+.margin_top{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.margin_top_50{
+    margin-top: 50px;
+}
+
+a{
+    text-decoration: none;
+    outline-width: 0;
+}
+a:hover {
+    outline-width: 0;
+}
+
+
+.h-section {
+    background-image: url("images/top-view-person-writing-laptop-with-copy-space.jpg");
+    background-position: 0% 50%;
+        color: #111111;
+            object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.h-list{
+  width: 95%;
+  padding: 1px;
+}
+.h-repeater{
+width: 600px;
+    margin: 60px 0 0 auto;
+    padding: 25px; 
+}
+.h-repeater-item{
+        max-width: 47%;
+    min-width: 47%;
+    margin: 8px;
+
+    color: #111111;
+    background-color: #ffffff;
+    border-radius: 20px !important;
+}
+
+.h-repeater-content {
+    padding: 10px 20px;
+}
+
+.h-heading-text{
+font-size: 3rem;
+    font-weight: 700;
+    margin: 0 auto;
+    line-height: 1.1;
+    padding: 0;
+    color: #6bc581 !important;
+    word-wrap: break-word;
+    text-align: center;
+}
+.h-text{
+    font-size: 0.875rem;
+    margin: 20px 0 0;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 0;
+}
+
+
+.h-item-text {
+   font-size: 18px;
+   margin: 30px 60px 60px auto;
+    text-align: right;
+}
+.h-text-link{
+color: #b3b3b3;
+display: inline;
+border-width: 1px;
+border-style: none none solid;
+    padding: 0;
+    border-color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+    color: #6bc581 !important;
+}
+.h-text-link:hover{
+  border: none !important;  
+}
+
+@media screen and (max-width: 600px){
+.h-list {
+    width: 90%;
+}
+.h-repeater {
+    width: 96%;
+    padding: 0px;
+}
+.h-repeater-item {
+    max-width: 100%;
+    min-width: 100%;
+    }
+
+}
+@media screen and (max-width: 412px){
+
+}
+
+ @media only screen and (min-width: 767px) and (max-width: 1000px)  {
 
 
 
-
+}
 
 </style>
 </head>
@@ -91,7 +204,61 @@ body{
  <div class="top-nav-dashb"></div>
 
 
-  
+  <section class="h-section">
+
+        <div class="h-list">
+
+          <div class="h-repeater flex flex-wrap flex-grow justify-center">
+
+            <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2017</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+                <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2018</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+                <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2019</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+                <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2020</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+                <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2021</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+                <div class="h-repeater-item">
+              <div class="h-repeater-content">
+                <h2 class="h-heading-text">2022</h2>
+                <p class="h-text">Sample text. Click to select the Text Element.</p>
+              </div>
+            </div>
+
+           
+
+        </div>
+        <p class="h-item-text">Image from <a href="https://nicepage.site" class="h-text-link">Freepik</a>
+        </p>
+      </div>
+    </section>
 
 
 
