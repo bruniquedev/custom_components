@@ -458,11 +458,11 @@ margin: 0px 25px 0px 0px !important;
 
                         <ul class="info-list">
 
-                            <li><span class="icon ion ion-chair"></span> 5000 Seats</li>
+                            <li><span class="icon ion ion-android-star"></span> 5000 Seats</li>
 
-                            <li><span class="icon ion ion-user-alt"></span> 12 SPEAKERS</li>
+                            <li><span class="icon ion ion-android-star"></span> 12 SPEAKERS</li>
 
-                            <li><span class="icon ion ion-map-marker-alt"></span> Palo, California</li>
+                            <li><span class="icon ion ion-android-star"></span> Palo, California</li>
 
                         </ul>
 

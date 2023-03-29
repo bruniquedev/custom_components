@@ -33,7 +33,7 @@ body{
     padding: 0px;
     /*font-family: 'Lato', sans-serif;*/
         font-family: Myriad-Regular;
-            font-size: 14px;
+    font-size: 15px;
     color: #777777;
     line-height: 1.7em;
     font-weight: 400;
@@ -49,7 +49,7 @@ body{
     top: 0px;
     margin: 0;
     padding: 0;
-    z-index: 10;
+   z-index: 10; 
 }
 
 
