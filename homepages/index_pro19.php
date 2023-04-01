@@ -441,22 +441,36 @@ background-color: #fff;
 color: #ec167f;
 border:1px solid #ec167f;
 }
-.comment-form .form-group {
-    margin-bottom: 20px;
+
+
+
+.row-form{
+display: flex;
+flex-wrap: wrap;
+flex-grow: 1;
+}
+.col-50{
+width: 47%;
+padding-left: 6px;
+padding-right: 6px;
+}
+.col-100{
+width: 96%;
+padding-left: 6px;
+padding-right: 6px;
 }
 
-.comment-form .col-group-1 {
-width: 45%;
-    margin-right: 56px;
 
-    }
-    .comment-form .col-group-2 {
-    width: 46%;
-    }
-.comment-form .form-group input[type="text"],
- .comment-form .form-group input[type="email"],
-  .comment-form .form-group textarea,
-   .comment-form .form-group select{
+.comment-form form .form-input-group{
+display: flex;
+margin-top: 1rem;
+}
+
+input[type="text"],
+ input[type="email"],
+ input[type="file"],
+ textarea,
+select{
     display: block;
     height: 30px;
     width: 100%;
@@ -466,17 +480,19 @@ width: 45%;
     font-weight: 400;
     padding: 10px 20px;
     background-color: #ffffff;
-    border: 1px solid #999999;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
         transition: all 300ms ease;
         outline-width: 0 !important;
         outline: none !important;
+        transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 }
-  .comment-form .form-group textarea {
+.comment-form form textarea {
     height: 190px;
-    resize: none;
 }  
-.comment-form .form-group input[type="submit"],
- .comment-form .form-group button {
+ 
+.comment-form .form-input-group input[type="submit"],
+ .comment-form .form-input-group button {
     font-size: 15px;
     padding: 10px 30px;
     font-weight: 500;
@@ -646,18 +662,12 @@ width: 100%;
 .social-icon-three li a .ion {
     font-size: 28px;
 }
-
-.comment-form .col-group-1,.comment-form .col-group-2{
-    width: 100%;
-    margin-right: 0;
+.col-50 {
+    width: 47%;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-.comment-form .form-group input[type="text"],
- .comment-form .form-group input[type="email"],
-  .comment-form .form-group textarea,
-   .comment-form .form-group select{
-    width: 85%;
-   }
 
 }
 
@@ -686,10 +696,7 @@ width: 100%;
     width: 100%;
     margin-top: 20px;
 }
-    .comment-form .col-group-1,.comment-form .col-group-2{
-    width: 100%;
-    margin-right: 0;
-}
+
 
 }
 
@@ -904,38 +911,34 @@ width: 100%;
 
                             <form method="post" action="blog.html"> 
 
-                                <div class="row-group flex flex-wrap flex-grow">
-
-                                    <div class="col-group-1 form-group">
-
-                                        <input type="text" name="username" placeholder="Name" required="">
-
+                                 <div class="row-form">
+                                  <div class="col-50">
+                                     <div class="form-input-group">
+                                    <input type="text" name="username" class="input-control" placeholder="Name" required="">
                                     </div>
-
-                                    
-                                    <div class="col-group-2 form-group">
-
-                                        <input type="email" name="email" placeholder="Email" required="">
-
+                                </div>
+                                    <div class="col-50">
+                                     <div class="form-input-group">
+                                        <input type="email" name="email" class="input-control" placeholder="Email" required="">
                                     </div>
-
+                                </div>
                                 </div>
 
 
 
-                                    <div class="col-group-100 form-group">
-
+                                    <div class="col-100">
+                                    <div class="form-input-group">
                                         <textarea name="message" placeholder="Your Comments"></textarea>
-
                                     </div>
+                                </div>
 
                                     
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-
+                                       <div class="col-100">
+                                    <div class="form-input-group">
                                         <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Post Comment</span></button>
-
                                     </div>
+                                </div>
 
                                 
 

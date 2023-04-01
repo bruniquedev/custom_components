@@ -274,26 +274,8 @@ color: #00B074 !important;
 margin-right: 0.5rem !important;
     font-size: 15px;
 }
-.form-container-details h4{
-    margin-top: 0px;
-     margin-bottom: 1.5rem !important;
-     font-size: 1.6rem;   
-     font-weight: 700;
-    line-height: 1.2;
-    color: #2B3940;
-}
 
-.form-container-details .row-1{
-display: flex;
-}
 
-.form-container-details .row-1 .col-1{
-    width: 50%;
-}
-
-.form-container-details .row-1 .col-100{
-   width: 100%; 
-}
 
 
 
@@ -325,7 +307,44 @@ color: #00B074 !important;
     margin-right: 0.5rem !important;
 }
 
+.form-container-details{
+    width: 100%;
+}
 
+.form-container-details form{
+    width: 100%;
+}
+
+.form-container-details h4{
+    margin-top: 0px;
+     margin-bottom: 1.5rem !important;
+     font-size: 1.6rem;   
+     font-weight: 700;
+    line-height: 1.2;
+    color: #2B3940;
+}
+
+.row-form{
+display: flex;
+flex-wrap: wrap;
+flex-grow: 1;
+}
+.col-50{
+width: 47%;
+padding-left: 6px;
+padding-right: 6px;
+}
+.col-100{
+width: 96%;
+padding-left: 6px;
+padding-right: 6px;
+}
+
+
+.form-container-details form .form-input-group{
+display: flex;
+margin-top: 1rem;
+}
 
 input[type="text"],
  input[type="email"],
@@ -341,15 +360,17 @@ select{
     font-weight: 400;
     padding: 10px 20px;
     background-color: #ffffff;
-    border: 1px solid #999999;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
         transition: all 300ms ease;
         outline-width: 0 !important;
         outline: none !important;
+        transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 }
-.form-container-details textarea {
+.form-container-details form textarea {
     height: 190px;
-    resize: none;
 }  
+
 
 
 .btn-1 {
@@ -420,7 +441,11 @@ select{
 .bg-light{
       padding: 1rem !important;
   }
-
+.col-50 {
+    width: 47%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
 
 }
 
@@ -503,33 +528,41 @@ select{
 <div class="form-container-details">
 <h4>Apply For The Job</h4>
 <form>
-
-<div class="row-1">   
-<div class="col-1">
+ 
+ <div class="row-form">
+<div class="col-50">
+<div class="form-input-group">
 <input type="text" class="input-control" placeholder="Your Name">
 </div>
-<div class="col-1">
+</div>
+<div class="col-50">
+ <div class="form-input-group">   
 <input type="email" class="input-control" placeholder="Your Email">
 </div>
 </div>
+</div>
 
-<div class="row-1 margin_top">
-<div class="col-1">
+<div class="row-form">
+<div class="col-50">
+<div class="form-input-group">
 <input type="text" class="input-control" placeholder="Portfolio Website">
 </div>
-<div class="col-1">
+</div>
+<div class="col-50">
+<div class="form-input-group">
 <input type="file" class="input-control">
 </div>
 </div>
+</div>
 
-<div class="row-1 margin_top">
-<div class="col-100 inputgroup">
+<div class="col-100">
+<div class="form-input-group">
 <textarea class="input-control" rows="5" placeholder="Coverletter"></textarea>
 </div>
 </div>
 
-<div class="row-1 margin_top">
-<div class="col-100 form-btn">
+<div class="col-100">
+<div class="form-input-group">
 <button class="btn-1 btn-primary-1 w-full" type="submit">Apply Now</button>
 </div>
 </div>
