@@ -102,11 +102,100 @@ a:hover {
     outline-width: 0;
 }
 
+.section_mb{
+  color: #111111;
+    background-color: #ffffff;
+    text-align: center;  
+}
 
+.u-heading-mb{
+    font-weight: 700;
+    font-size: 3rem;
+    width: 877px;
+    margin: 60px auto 0;
+    line-height: 1.1;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.u-list-mb{
+ margin: 98px 0 60px;
+     width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;   
+}
+.u-repeater-item-mb{
+    width: 20%;
+        margin-left: 10px;
+color: #111111;
+    background-color: #ffc63d;
+}
+.item-content-mb{
+  padding: 0 20px 30px;  
+}
+
+.item-content-mb .u-icon-rectangle{
+   height: 40px;
+    width: 40px;
+    background-image: none;
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
+    margin: -36px auto 0;
+    padding: 16px;
+    border-color: #ffc63d;
+    background-color: #ffffff;
+    border-width: 7px;
+    border-style: solid;
+        display: block;
+    line-height: 0;
+
+}
+
+.item-content-mb .u-icon-rectangle i{
+font-size: 45px;
+color: #ffc63d;
+}
+
+.item-content-mb .u-heading-mb-5{
+    margin: 30px 0 0;
+    padding: 0px;
+    word-wrap: break-word;
+        font-size: 1.25rem;
+    line-height: 1.2;
+        font-weight: 700;
+}
+
+.item-content-mb .u-text-mb{
+    font-style: normal;
+    margin: 29px 0 0;
+    word-wrap: break-word;
+    padding:0px;
+    color: #111111;
+}
+
+.item-content-mb a{
+    color:#111111;
+}
+.u-icon-mb{
+    width: 34px;
+    height: 34px;
+    margin: 30px auto 0;
+    padding: 0;
+}
+
+
+.u-icon-mb i{
+ font-size: 30px;   
+}
 
 
 @media screen and (max-width: 600px){
-
+.u-heading-mb {
+width: 100%;
+}
+.u-repeater-item-mb {
+    width: 100%;
+    margin: 25px !important;
+    }
 
 }
 
@@ -122,6 +211,7 @@ a:hover {
 
 
 
+
 </style>
 </head>
 <body>  
@@ -130,7 +220,58 @@ a:hover {
  <div class="top-nav-dashb"></div>
 
 
-  
+  <section class="section_mb">
+      <div class="u-sheet-mb">
+
+        <h2 class="u-heading-mb"> Join now for just $10/month</h2>
+
+        <div class="u-list-mb">
+          <div class="u-repeater-mb flex flex-wrap flex-grow justify-center">
+
+
+            <div class="u-repeater-item-mb">
+              <div class="item-content-mb">
+                <span class="u-icon-rectangle"><i class="ion ion-refresh"></i></span>
+                <h5 class="u-heading-mb-5"> Unlimited Fitness</h5>
+                <p class="u-text-mb">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <a href="#"><span class="u-icon-mb"><i class="ion ion-arrow-right-a"></i></span></a>
+              </div>
+            </div>
+
+                <div class="u-repeater-item-mb">
+              <div class="item-content-mb">
+                <span class="u-icon-rectangle"><i class="ion ion-refresh"></i></span>
+                <h5 class="u-heading-mb-5"> Personal Training</h5>
+                <p class="u-text-mb">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <a href="#"><span class="u-icon-mb"><i class="ion ion-arrow-right-a"></i></span></a>
+              </div>
+            </div>
+
+                <div class="u-repeater-item-mb">
+              <div class="item-content-mb">
+                <span class="u-icon-rectangle"><i class="ion ion-refresh"></i></span>
+                <h5 class="u-heading-mb-5">Massage Therapy</h5>
+                <p class="u-text-mb">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <a href="#"><span class="u-icon-mb"><i class="ion ion-arrow-right-a"></i></span></a>
+              </div>
+            </div>
+
+                <div class="u-repeater-item-mb">
+              <div class="item-content-mb">
+                <span class="u-icon-rectangle"><i class="ion ion-refresh"></i></span>
+                <h5 class="u-heading-mb-5">Quick Workouts</h5>
+                <p class="u-text-mb">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <a href="#"><span class="u-icon-mb"><i class="ion ion-arrow-right-a"></i></span></a>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
 
 
 
