@@ -374,29 +374,44 @@ max-width: 47%;
 }
 
 .about-section .content-column .image-box {
-    padding-left: 0;
-    text-align: center;
+   margin-bottom: 0;
+  margin: 1rem 0 1rem;
+  text-align: center;
+      /* Feel free to adjust the values here so you can see it being responsive */
+  width: 400px;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
 }
 
 .about-section .content-column .image-container {
-    max-width: 500px;
-    display: inline-block;
-     margin-bottom: 0;
-         margin: 0 0 1rem;
+    position: relative;
+  width: 100%;
+  height: 0;
+  padding: 100% 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+   border: 15px solid #ffcf09;
+    box-shadow: 0 0 20px rgba(0,0,0,0.10);
 }
 .about-section .content-column .image-box img {
-    position: relative;
-    z-index: 1;
-    border-radius: 50%;
-    border: 15px solid #ffffff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.10);
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
     vertical-align: middle;
 }
 
 /**********About section***********/
+
+@media screen and (max-width: 280px){
+.about-section .content-column .image-box {
+    width: 220px !important;
+}
+}
 
 
 @media screen and (max-width: 600px){
@@ -411,6 +426,10 @@ max-width: 47%;
 
 .about-section .content-column {
     max-width: 100%;
+    }
+
+    .about-section .content-column .image-box{
+        width: 255px;
     }
 
     .content-column .image-container {
@@ -430,6 +449,12 @@ margin: 0px 25px 0px 0px !important;
 .about-section .content-column {
     max-width: 45%;
 }
+
+ .about-section .content-column .image-box{
+        width: 290px;
+    }
+
+
 }
 
 </style>
@@ -569,17 +594,12 @@ margin: 0px 25px 0px 0px !important;
 
 
                 <!-- Content Column 2-->
-
                 <div class="content-column">
-
                     <div class="image-box">
-
                         <figure class="image-container">
                             <img src="images/about-img-1.jpg" alt="">
                         </figure>
-
                     </div>
-
                 </div>
                 <!-- /Content Column 2-->
 
