@@ -252,85 +252,8 @@ margin: 10px 20px;
 }  
  /***************\first check boxes plan *******/ 
 
+/**************************second checkbox***********/
 
-
-
-
-
-@media screen and (max-width: 600px){
-.card-item{
-    width: 100%;
-}
-
-}
-
-@media screen and (max-width: 412px){
-
-}
-
- @media only screen and (min-width: 767px) and (max-width: 1000px)  {
-
-}
-
-
-
-
-
-</style>
-</head>
-<body>  
-
-
- <div class="top-nav-dashb"></div>
-
-<section class="cards-section">
-  
-<div class="grid">
-
-  <label class="card-item">
-    <input name="plan" class="radio" type="radio" checked>
-    <span class="plan-details">
-      <span class="plan-type">Basic</span>
-      <span class="plan-cost">$0<span class="slash">/</span>
-      <abbr class="plan-cycle" title="month">mo</abbr></span>
-      <span>1 team member</span>
-      <span>100 GB/mo</span>
-      <span>1 concurrent build</span>
-    </span>
-  </label>
-
-
-  <label class="card-item">
-    <input name="plan" class="radio" type="radio">
-    <span class="hidden-visually">Pro - $50 per month, 5 team members, 500 GB per month, 5 concurrent builds</span>
-    <span class="plan-details" aria-hidden="true">
-      <span class="plan-type">Pro</span>
-      <span class="plan-cost">$50<span class="slash">/</span><span class="plan-cycle">mo</span></span>
-      <span>5 team members</span>
-      <span>500 GB/mo</span>
-      <span>5 concurrent builds</span>
-    </span>
-  </label>
-
-  <label class="card-item">
-    <input name="plan" class="radio" type="radio">
-    <span class="hidden-visually">Business - $200 per month, 5+ team members, 1000 GB per month, Unlimited builds</span>
-    <span class="plan-details" aria-hidden="true">
-      <span class="plan-type">Business</span>
-      <span class="plan-cost">$200<span class="slash">/</span><span class="plan-cycle">mo</span></span>
-      <span>5+ team members</span>
-      <span>1000 GB/mo</span>
-      <span>Unlimited builds</span>
-    </span>
-  </label>
-
-</div>
-
-</section>
-
-
-
-<style type="text/css">
   .form-inputs {
   padding: 0 16px;
   max-width: 550px;
@@ -420,15 +343,149 @@ margin: 10px 20px;
         background-color: #54E0C7;
         border-color: #54E0C7;
       }
-   
+   /**************************\second checkbox***********/
 
-  
+
+/****************buttons styles*************/
+.buttons{
+    margin: 0px 50px;
+}
+
+   .button-btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.button-btn:hover {
+  background-color: #45a049;
+} 
+
+.btn-style1 {
+    font-size: 16px;
+    width: 163px;
+    height: 48px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 23px;
+       color: #fff;
+    background: #f62f5e;
+}
+.btn-style1:hover{
+    transform: scale(1.1);
+}
+
+.btn-style2{
+box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+
+    color: #1C1D21;
+    background: #EEEFF7;
+    font-weight: bold;
+}
+
+.btn-style3 {
+     display: block;
+  background: linear-gradient(-45deg, #2ed6bc, #01BCE6);
+  width: 200px;
+  color: white;
+  padding: 10px 18px;
+  margin: 40px auto;
+  font-size: 18px;
+  border-radius: 22px;
+  border: 1px solid #fff;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+    }
+    /****************\buttons styles*************/
+
+
+
+@media screen and (max-width: 600px){
+.card-item{
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 412px){
+
+}
+
+ @media only screen and (min-width: 767px) and (max-width: 1000px)  {
+
+}
 
 
 
 
 
 </style>
+</head>
+<body>  
+
+
+ <div class="top-nav-dashb"></div>
+
+<section class="cards-section">
+  
+<div class="grid">
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio" checked>
+    <span class="plan-details">
+      <span class="plan-type">Basic</span>
+      <span class="plan-cost">$0<span class="slash">/</span>
+      <abbr class="plan-cycle" title="month">mo</abbr></span>
+      <span>1 team member</span>
+      <span>100 GB/mo</span>
+      <span>1 concurrent build</span>
+    </span>
+  </label>
+
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio">
+    <span class="hidden-visually">Pro - $50 per month, 5 team members, 500 GB per month, 5 concurrent builds</span>
+    <span class="plan-details" aria-hidden="true">
+      <span class="plan-type">Pro</span>
+      <span class="plan-cost">$50<span class="slash">/</span><span class="plan-cycle">mo</span></span>
+      <span>5 team members</span>
+      <span>500 GB/mo</span>
+      <span>5 concurrent builds</span>
+    </span>
+  </label>
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio">
+    <span class="hidden-visually">Business - $200 per month, 5+ team members, 1000 GB per month, Unlimited builds</span>
+    <span class="plan-details" aria-hidden="true">
+      <span class="plan-type">Business</span>
+      <span class="plan-cost">$200<span class="slash">/</span><span class="plan-cycle">mo</span></span>
+      <span>5+ team members</span>
+      <span>1000 GB/mo</span>
+      <span>Unlimited builds</span>
+    </span>
+  </label>
+
+</div>
+
+</section>
+
 
   
   <form class="form-inputs">
@@ -455,7 +512,13 @@ margin: 10px 20px;
 </form>
 
 
+<div class="buttons center">
 
+<button type="submit" class="button-btn">Continue to checkout</button>
+<button type="submit" class="btn-style1">Next Step</button>
+<button type="submit" class="btn-style2">Pay Now</button>
+<button type="submit" class="btn-style3">Confirm and Pay</button>
+</div>
 
 </body>
 </html>
