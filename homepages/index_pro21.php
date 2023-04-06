@@ -37,7 +37,7 @@ body{
     color: #777777;
     line-height: 1.7em;
     font-weight: 400;
-    background: #ffffff;
+     background-color: #f2f8ff;
 }
 
 .top-nav-dashb {
@@ -102,11 +102,165 @@ a:hover {
     outline-width: 0;
 }
 
+.cards-section{
+    margin-top: 70px;
+}
+
+/***************first check boxes plan *******/
+.grid{
+display: flex;
+flex-grow: 1;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.card-item {
+  background-color: #fff;
+  border-radius: 0.5em;
+  position: relative;
+margin: 10px 20px;
+  max-width: 60em;
+  padding: 0;
+  
+}
+ .card-item:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-item .radio {
+  font-size: inherit;
+  margin: 0;
+  position: absolute;
+  right: calc(1em + 2px);
+  top: calc(1em + 2px);
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff;
+    border: 2px solid #e2ebf6;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.5em;
+    outline: none;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out;
+    width: 1.5em; 
+}
+
+ .card-item .radio::after {
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+      content: '';
+      display: block;
+      height: 0.75rem;
+      left: 25%;
+      position: absolute;
+      top: 50%;
+      transform: 
+        rotate(45deg)
+        translate(-50%, -50%);
+      width: 0.375rem;
+    }
+
+ .card-item .radio:checked {
+      background: #558309;
+      border-color: #558309;
+    }
+
+    .card-item:hover .radio {
+    border-color: #c4d1e1;
+    }
+  .card-item:hover .radio:checked {
+      border-color: #558309;
+    }
+
+
+  .card-item .plan-details {
+  border: 2px solid #e2ebf6;
+  border-radius: 0.5em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  transition: border-color 0.2s ease-out;
+}
+
+.card-item .card:hover .plan-details {
+  border-color:#c4d1e1;
+}
+
+.card-item .radio:checked ~ .plan-details {
+  border-color: #558309;
+}
+
+.card-item .radio:focus ~ .plan-details {
+  box-shadow: 0 0 0 2px #c4d1e1;
+}
+
+.card-item .radio:disabled ~ .plan-details {
+  color: #c4d1e1;
+  cursor: default;
+}
+
+.card-item .radio:disabled ~ .plan-details .plan-type {
+  color: #c4d1e1;
+}
+
+.card-item .card:hover .radio:disabled ~ .plan-details {
+  border-color: #e2ebf6;
+  box-shadow: none;
+}
+
+.card-item .card:hover .radio:disabled {
+    border-color: #e2ebf6;
+  }
+
+.card-item .plan-type {
+  color: #558309;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.card-item .plan-cost {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+.card-item .slash {
+  font-weight: normal;
+}
+
+.card-item .plan-cycle {
+  font-size: 2rem;
+  font-variant: none;
+  border-bottom: none;
+  cursor: inherit;
+  text-decoration: none;
+}
+
+.card-item .hidden-visually {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}  
+ /***************\first check boxes plan *******/ 
+
+
+
 
 
 
 @media screen and (max-width: 600px){
-
+.card-item{
+    width: 100%;
+}
 
 }
 
@@ -129,8 +283,176 @@ a:hover {
 
  <div class="top-nav-dashb"></div>
 
+<section class="cards-section">
+  
+<div class="grid">
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio" checked>
+    <span class="plan-details">
+      <span class="plan-type">Basic</span>
+      <span class="plan-cost">$0<span class="slash">/</span>
+      <abbr class="plan-cycle" title="month">mo</abbr></span>
+      <span>1 team member</span>
+      <span>100 GB/mo</span>
+      <span>1 concurrent build</span>
+    </span>
+  </label>
+
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio">
+    <span class="hidden-visually">Pro - $50 per month, 5 team members, 500 GB per month, 5 concurrent builds</span>
+    <span class="plan-details" aria-hidden="true">
+      <span class="plan-type">Pro</span>
+      <span class="plan-cost">$50<span class="slash">/</span><span class="plan-cycle">mo</span></span>
+      <span>5 team members</span>
+      <span>500 GB/mo</span>
+      <span>5 concurrent builds</span>
+    </span>
+  </label>
+
+  <label class="card-item">
+    <input name="plan" class="radio" type="radio">
+    <span class="hidden-visually">Business - $200 per month, 5+ team members, 1000 GB per month, Unlimited builds</span>
+    <span class="plan-details" aria-hidden="true">
+      <span class="plan-type">Business</span>
+      <span class="plan-cost">$200<span class="slash">/</span><span class="plan-cycle">mo</span></span>
+      <span>5+ team members</span>
+      <span>1000 GB/mo</span>
+      <span>Unlimited builds</span>
+    </span>
+  </label>
+
+</div>
+
+</section>
+
+
+
+<style type="text/css">
+  .form-inputs {
+  padding: 0 16px;
+  max-width: 550px;
+  margin: 50px auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}  
+.form-inputs .inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+}
+
+  .inputGroup .check-input {
+      width: 32px;
+      height: 32px;
+      order: 1;
+      z-index: 2;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      visibility: hidden;
+    }
+
+    .inputGroup label {
+      padding: 12px 30px;
+      width: auto;
+      display: block;
+      text-align: left;
+      color: #3C454C;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: color 200ms ease-in;
+      overflow: hidden;
+         }
+      .inputGroup label::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        content: '';
+        background-color: #5562eb;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0;
+        z-index: -1;
+      }
+
+      .inputGroup label::after {
+        width: 32px;
+        height: 32px;
+        font-family: "Ionicons";
+        content: '\f122';
+        text-align: center;
+    color: #fff;
+        border: 2px solid #D1D7DC;
+        background-color: #fff;
+        /*background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");*/
+        background-repeat: no-repeat;
+        background-position: 2px 3px;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+        right: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all 200ms ease-in;
+    }
+
+   .inputGroup input:checked ~ label {
+      color: #fff;
+       }
+     .inputGroup input:checked ~ label::before {
+        transform: translate(-50%, -50%) scale3d(56, 56, 1);
+        opacity: 1;
+      }
+
+     .inputGroup input:checked ~ label::after {
+        background-color: #54E0C7;
+        border-color: #54E0C7;
+      }
+   
 
   
+
+
+
+
+
+</style>
+
+  
+  <form class="form-inputs">
+  <h2>Checkboxes</h2>
+  <div class="inputGroup">
+    <input class="check-input" id="option1" name="option1" type="checkbox"/>
+    <label for="option1">Option One</label>
+  </div>
+  
+  <div class="inputGroup">
+    <input class="check-input" id="option2" name="option2" type="checkbox"/>
+    <label for="option2">Option Two</label>
+  </div>
+  
+  <h2>Radio Buttons</h2>
+  <div class="inputGroup">
+    <input class="check-input" id="radio1" name="radio" type="radio"/>
+    <label for="radio1">Yes</label>
+  </div>
+  <div class="inputGroup">
+    <input class="check-input" id="radio2" name="radio" type="radio"/>
+    <label for="radio2">No</label>
+  </div>
+</form>
 
 
 
