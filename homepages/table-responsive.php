@@ -217,7 +217,8 @@ margin-top: 60px;
 
 .table-container th,
 .table-container td {
-  padding: .625em;
+  /*padding: .625em;*/
+  padding: .425em;
   text-align: left;
       border: 1px solid #eee;
 }
