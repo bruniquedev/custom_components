@@ -122,6 +122,7 @@ margin-top: 60px;
 
 /*///////////custom  responsive table /////////////*/
 
+/*
 .custom_card {
   padding: 0px 0px 0px 0px;
   text-decoration: none;
@@ -133,7 +134,53 @@ margin-top: 60px;
   transition: 0.5s;
   margin-top: 0px;
       border-radius: .25rem!important;
+}*/
+
+/*----card ui dashboard example---*/
+.table-card{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 40px 0 rgba(18,106,211,.07), 0 2px 9px 0 rgba(18,106,211,.06);
+    border: none;
+    margin-bottom: 1.875rem;
+    transition: all .3s ease;
+    border-bottom: 1px solid rgba(234,243,253,.9);
 }
+
+.table-card-head {
+    border-radius: 2px 2px 0 0;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    /* text-transform: uppercase; */
+    color: #3a405b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    min-height: 40px;
+}
+
+.table-card-header {
+    display: inline-block;
+    padding: 11px 20px;
+    vertical-align: middle;
+    line-height: 17px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.table-card-body {
+    padding: 0.25rem;
+}
+
+
+
 .table-container {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -541,6 +588,15 @@ ul.dropdown-content-ui li.active, ul.dropdown-content-ui li a.active{
 
 
 
+<!--table starts here-->
+<div class="table-card">
+
+ <div class="table-card-head">
+<header class="table-card-header">ADMIT PATIENT LIST</header>
+</div> 
+
+<div class="table-card-body">
+
 <table class="table-container" cellspacing="0" cellpadding="5" style="background: #fff;">
 <thead id="tablehead">
 <tr class="thead table-light">
@@ -753,6 +809,9 @@ ul.dropdown-content-ui li.active, ul.dropdown-content-ui li a.active{
 </tbody>
 </table>
 
+</div>
+</div>
+<!--/table ends here-->
 
 
 
