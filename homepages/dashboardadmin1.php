@@ -1023,7 +1023,7 @@ Green
         <ul class="ui-ListWindow">
             <li>
                 <div class="prog-avatar">
-                    <img src="images/doc1.jpg" alt="" width="40" height="40">
+                    <img src="images/-min.jpg" alt="" width="40" height="40">
                 </div>
                 <div class="ui-details-x">
                     <div class="ui-title-x">
