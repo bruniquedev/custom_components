@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>music wave animation</title>
+<style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    /*font-family: 'Lato', sans-serif;*/
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.7em;
+    font-weight: 400;
+    background: #ffffff;
+}
+
+.wave-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.music-bars{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-bars .bar{
+    width: 12px;
+    border-radius: 10px;
+    background-color: #fff;
+    animation: movement 1.5s ease-in-out infinite;
+}
+
+@keyframes movement{
+    0%,100%{
+        height: 2px;
+    }
+    50%{
+        height: 80px;
+    }
+}
+
+.music-bars .bar:nth-child(1){
+
+    background-color: #b65252;
+    animation-delay: 1s;
+}
+.music-bars .bar:nth-child(2){
+
+    background-color: pink;
+    animation-delay: .8s;
+}
+.music-bars .bar:nth-child(3){
+
+    background-color: #b65252;
+    animation-delay: .6s;
+}
+.music-bars .bar:nth-child(4){
+
+    background-color: pink;
+    animation-delay: .4s;
+}
+.music-bars .bar:nth-child(5){
+
+    background-color: #b65252;
+    animation-delay: .2s;
+}
+.music-bars .bar:nth-child(6){
+
+    background-color: pink;
+    animation-delay: .2s;
+}
+.music-bars .bar:nth-child(7){
+
+    background-color: #b65252;
+    animation-delay: .4s;
+}
+.music-bars .bar:nth-child(8){
+
+    background-color: pink;
+    animation-delay: .6s;
+}
+.music-bars .bar:nth-child(9){
+
+    background-color: #b65252;
+    animation-delay: .8s;
+}
+.music-bars .bar:nth-child(10){
+
+    background-color: pink;
+    animation-delay: 1s;
+}
+
+</style>
+
+
+</head>
+<body>  
+
+
+<div class="wave-container">
+
+<div class="music-bars">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+</div>
+
+
+</body>
+</html>    
