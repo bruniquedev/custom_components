@@ -59,13 +59,12 @@ label{
   width: 40px;
   height: 40px;
   display:flex;
-  content: '\f00c';
+  content: '\2713';
   font-size: 25px;
   font-weight:bold;
   position: absolute;
   align-items:center;
   justify-content:center;
-  font-family:'Font Awesome 5 Free';
 }
 .option-input:checked::after {
   -webkit-animation: click-wave 0.65s;

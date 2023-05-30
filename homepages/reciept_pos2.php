@@ -35,7 +35,6 @@ body{
         font-family: Myriad-Regular;
     font-size: 15px;
     color: #777777;
-    line-height: 1.7em;
     font-weight: 400;
     background: #ffffff;
 }
@@ -139,7 +138,7 @@ h1.po-h1{
   font-size: 1.5em;
   color: #222;
 }
-h2.po-h2{font-size: .9em;}
+h2.po-h2{font-size: 11px; padding-left: 2px; font-weight: 500;}
 h3.po-h3{
   font-size: 1.2em;
   font-weight: 300;
@@ -196,13 +195,22 @@ table.po-table td{
 }
 .po-tabletitle{
   /*padding: 5px;*/
-  font-size: .4em;
+  font-size: 10px;
   background: #EEE;
   color: #000;
 }
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    padding: 0;
+    hyphens: auto;
+}
+
 .po-service{border-bottom: 1px solid #EEE;}
 .po-item{width: 24mm;}
-.po-itemtext{font-size: .5em;}
+.po-itemtext{font-size: 11px; padding-left: 2px;}
 
 #po-legalcopy{
   margin-top: 5mm;
@@ -283,46 +291,54 @@ table.po-table td{
                             </tr>
 
                             <tr class="po-service">
-                                <td class="po-tableitem"><p class="po-itemtext">Communication</p></td>
+                                <td class="po-tableitem"><p class="po-itemtext text-truncate">Communication</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">5</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">$375.00</p></td>
                             </tr>
 
                             <tr class="po-service">
-                                <td class="po-tableitem"><p class="po-itemtext">Asset Gathering</p></td>
+                                <td class="po-tableitem"><p class="po-itemtext text-truncate">Asset Gathering</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">3</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">$225.00</p></td>
                             </tr>
 
                             <tr class="po-service">
-                                <td class="po-tableitem"><p class="po-itemtext">Design Development</p></td>
+                                <td class="po-tableitem"><p class="po-itemtext text-truncate">Design Development</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">5</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">$375.00</p></td>
                             </tr>
 
                             <tr class="po-service">
-                                <td class="po-tableitem"><p class="po-itemtext">Animation</p></td>
+                                <td class="po-tableitem"><p class="po-itemtext text-truncate">Animation</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">20</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">$1500.00</p></td>
                             </tr>
 
                             <tr class="po-service">
-                                <td class="po-tableitem"><p class="po-itemtext">Animation Revisions</p></td>
+                                <td class="po-tableitem"><p class="po-itemtext text-truncate">Animation Revisions</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">10</p></td>
                                 <td class="po-tableitem"><p class="po-itemtext">$750.00</p></td>
                             </tr>
 
 
                             <tr class="po-tabletitle">
-                                <td></td>
-                                <td class="po-Rate"><h2>tax</h2></td>
-                                <td class="po-payment"><h2>$419.25</h2></td>
+                                <td class="po-Rate"><h2 class="po-h2 text-truncate">tax</h2></td>
+                                <td class="po-payment" colspan="2"><h2 class="po-h2">$0</h2></td>
                             </tr>
 
                             <tr class="po-tabletitle">
-                                <td></td>
-                                <td class="po-Rate"><h2>Total</h2></td>
-                                <td class="po-payment"><h2>$3,644.25</h2></td>
+                                <td class="po-Rate"><h2 class="po-h2 text-truncate">Total</h2></td>
+                                <td class="po-payment" colspan="2"><h2 class="po-h2">$3,644.25</h2></td>
+                            </tr>
+
+                             <tr class="po-tabletitle">
+                                <td class="po-Rate"><h2 class="po-h2 text-truncate">Amount paid</h2></td>
+                                <td class="po-payment" colspan="2"><h2 class="po-h2">$3,644.25</h2></td>
+                            </tr>
+
+                              <tr class="po-tabletitle">
+                                <td class="po-Rate"><h2 class="po-h2 text-truncate">Balance</h2></td>
+                                <td class="po-payment" colspan="2"><h2 class="po-h2">$3,644.25</h2></td>
                             </tr>
 
                         </table>
