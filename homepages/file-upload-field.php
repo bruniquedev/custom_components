@@ -299,6 +299,49 @@ div.file-chooser-wrapper{
 /*-----/upload 3-----*/
 
 
+
+/*-----upload 4-----*/
+.image-chooser {
+  position: relative;
+  display: inline-block;
+}
+
+#image-upload {
+  display: none;
+}
+
+#preview-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  display: none;
+}
+
+.camera-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.camera-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+/*-----/upload 4-----*/
+
 @media screen and (max-width: 600px){
 
 
@@ -377,6 +420,39 @@ div.file-chooser-wrapper{
         })
     </script>
  <!--/upload field 3-->
+
+
+
+<!--upload field 4-->
+<div class="image-chooser">
+  <input type="file" id="image-upload" accept="image/*" />
+  <label for="image-upload">
+    <img id="preview-image" src="#" alt="Profile Picture" />
+    <div class="camera-icon">
+      <i class="ion ion-camera"></i>
+    </div>
+  </label>
+</div>
+<!--/upload field 4-->
+<script type="text/javascript">
+   document.getElementById('image-upload').addEventListener('change', function(event) {
+
+    event.preventDefault();
+  var file = event.target.files[0];
+  var reader = new FileReader();
+   var previewImage = document.getElementById('preview-image');
+ previewImage.style.display="block"; 
+  reader.onload = function(e) {
+   
+    previewImage.src = e.target.result;
+  };
+
+  reader.readAsDataURL(file);
+
+                
+            }, false);  
+</script>
+
 
 
    </div>
