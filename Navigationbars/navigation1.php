@@ -42,13 +42,18 @@ body {margin:0; font-family: Myriad-Regular;}
 }
 
 .navigation .menu-nav{
-  width: 80%;
+  width: 78%;
       margin-top: 0;
     padding-top: 0;
   list-style-type: none;
 }
 
 .nav_brand{
+     /*   position: relative;
+    top: 0px;
+    z-index: 13;
+    width: 100%;*/
+        margin-left: 4px;
 }
 .nav_brand .brand_text{
   margin-top: 14px;
@@ -67,6 +72,27 @@ width: 50px;
 margin-top: -15px;*/
     border-radius: 2px;
 
+}
+
+
+
+.logo_wrapper{
+    /*position: absolute;
+  left: 11px;*/
+  height: 50px;
+    width: 50px;
+     z-index: 999;
+     margin-top: 0px;
+      border-radius: 8px;
+}
+
+
+.logo_img{
+
+height:100%;
+/*width: 100%;*/
+ border-radius: 8px;
+ object-fit: contain;
 }
 
 ul.menu-nav li {
@@ -202,7 +228,20 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
   flex-grow: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
+
+.nav_brand{
+height: 50px;
+}
+
+  .logo_wrapper{
+  position: unset;
+    height: 100%;
+    margin-top: 8px; 
+}
+.nav_brand .brand_text {
+    margin-top: 21px;
+    }
 
 ul.menu-nav li{
        /* display: none; */
@@ -217,7 +256,7 @@ ul.menu-nav li{
     display: none;
   }
   .navigation a.icon {
-    font-size: 20px;
+    font-size: 25px;
     color: #f2f2f2;
     text-align: center;
     padding: 10px 16px;
@@ -245,7 +284,7 @@ ul.menu-nav li{
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .menu-nav.responsive {
     position: relative;
    /* margin: 0;
@@ -292,12 +331,14 @@ ul.menu-nav li{
 </head>
 <body>
 
-<div class="navigation" id="navigation">
+<div class="navigation flex-wrap flex-grow" id="navigation">
 
-
-   <div class="nav_brand flex">
-  <div class="logo_bg" style="background-image:url(images/logo.png);"></div>
-  <div class="brand_text">Brunique developers</div>
+   <div class="nav_brand flex flex-wrap flex-grow">
+  <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
+  <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
+  <img src="images/logo.png" alt="logo" class="logo_img" />
+</div>
+   <div class="brand_text">Brunique developers</div>
 </div>
 
    <ul class="menu-nav" id="menu-nav">

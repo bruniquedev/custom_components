@@ -49,18 +49,20 @@ body {margin:0; font-family: Myriad-Regular;}
       margin-top: 0;
     padding-top: 0;
   list-style-type: none;
-  margin-left: 165px;
+  margin-left: 200px;
 }
 
 .nav_brand{
       position: fixed;
     top: 0px;
     z-index: 13;
+    margin-left: 4px;
 }
 .nav_brand .brand_text{
   margin-top: 14px;
   color: #fff;
   font-size: 16px;
+ margin-left: 60px;
 }
 
 
@@ -74,6 +76,23 @@ width: 50px;
 margin-top: -15px;*/
     border-radius: 2px;
 
+}
+
+.logo_wrapper{
+    position: absolute;
+  left: 11px;
+  height: 50px;
+    width: 50px;
+     z-index: 999;
+     margin-top: 0px;
+      border-radius: 8px;
+}
+.logo_img{
+
+height:100%;
+/*width: 100%;*/
+ border-radius: 8px;
+ object-fit: contain;
 }
 
 ul.menu-nav li {
@@ -245,6 +264,11 @@ width: 225px;
 
 @media screen and (max-width: 900px) {
 
+  .logo_wrapper{
+  position: unset;
+    height: 100%; 
+}
+
   .responsive-nav {
     left: 0;
   margin-left:0;
@@ -351,12 +375,15 @@ box-shadow: 0px 4px 4px #ddd !important;
 </head>
 <body>
 
-<div class="navigation" id="navigation">
+<div class="navigation flex-wrap flex-grow" id="navigation">
 
 
-   <div class="nav_brand flex">
-  <div class="logo_bg" style="background-image:url(images/logo.png);"></div>
-  <div class="brand_text">Brunique developers</div>
+   <div class="nav_brand">
+  <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
+  <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
+  <img src="images/logo.png" alt="logo" class="logo_img" />
+</div>
+   <div class="brand_text">Brunique developers</div>
 </div>
 
 <div class="responsive-nav" id="responsive-nav">

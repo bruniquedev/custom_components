@@ -56,13 +56,15 @@ box-shadow: 0px 4px 4px #ddd !important;
     top: 0px;
     z-index: 13;
     width: 100%;
+  margin-left: 4px;
 }
 .nav_brand .brand_text{
  
  color: #111;
     font-size: 17px;
     position: absolute;
-    left: 104px;
+    /*left: 104px;*/
+    left: 95px;
     top: 15px;
 }
 
@@ -80,6 +82,24 @@ background-size: cover;
     border-radius: 2px;
 
 }
+
+.logo_wrapper{
+    position: absolute;
+  left: 11px;
+  height: 80px;
+    width: 80px;
+     z-index: 999;
+     margin-top: 0px;
+      border-radius: 8px;
+}
+.logo_img{
+
+height:100%;
+/*width: 100%;*/
+ border-radius: 8px;
+ object-fit: contain;
+}
+
 
 ul.menu-nav li {
   display: inline-block;
@@ -275,6 +295,11 @@ padding: 0px;
 
 @media screen and (max-width: 900px) {
 
+  .logo_wrapper{
+  position: unset;
+    height: 100%; 
+}
+
 .responsive-nav {
     left: 0;
   margin-left:0;
@@ -415,10 +440,12 @@ box-shadow: 0px 4px 4px #ddd !important;
 
 <div class="navigation" id="navigation">
 
-
    <div class="nav_brand">
-  <div class="logo_bg" style="background-image:url(images/logo.png);"></div>
-  <div class="brand_text">Brunique developers</div>
+  <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
+  <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
+  <img src="images/logo.png" alt="logo" class="logo_img" />
+</div>
+   <div class="brand_text">Brunique developers</div>
 </div>
 
 <div class="responsive-nav" id="responsive-nav">

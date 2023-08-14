@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>custom navigation 1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link rel="stylesheet" type="text/css" href="ionicons/css/ionicons.min.css" />
+
+<title>stacked navigation</title>
 <style type="text/css">
 
 @font-face{
@@ -22,35 +25,37 @@
 
 body {margin:0; font-family: Myriad-Regular;}
 
-.navigation {
-     position: fixed;
-  z-index: 12;
-  overflow: hidden;
-  top: 0px;
-  height: 80px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  /*display: flex;*/
-  background-color: #fff;
-    margin-bottom: 0px;
-    border-color: #333;
-    opacity: 1;
-    border-radius: 1px;
-  /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
-  box-shadow: 0px 4px 4px #ddd !important;
+.navigation{
+background-color: #fff;
 }
 
-.navigation .menu-nav{
-  /*width: 80%;*/
-  margin-top: 32px;
+.responsive-nav{
+  background-color: #fff;
+position: fixed;
+z-index: 12;
+top: 0px;
+width: 100%;
+height: 80px;
+margin: 0;
+padding: 0;
+margin-bottom: 0px;
+overflow: hidden;
+border-color: #333;
+opacity: 1;
+border-radius: 1px;
+/*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
+box-shadow: 0px 4px 4px #ddd !important;
+}
+
+.responsive-nav .menu-nav{
+     margin-top: 32px;
     padding-top: 0;
     list-style-type: none;
     margin-left: 50px;
 }
 
 .nav_brand{
-        position: fixed;
+      position: fixed;
     top: 0px;
     z-index: 13;
     width: 100%;
@@ -61,7 +66,7 @@ body {margin:0; font-family: Myriad-Regular;}
  color: #111;
     font-size: 17px;
     position: absolute;
-    /*left: 104px;*/
+    /*left: 145px;*/
     left: 95px;
     top: 15px;
 }
@@ -98,10 +103,9 @@ height:100%;
  object-fit: contain;
 }
 
-
 ul.menu-nav li {
   display: inline-block;
- 
+     border-bottom: 1px solid #DADADA;
 }
 ul.menu-nav li a {
   display: block;
@@ -123,12 +127,8 @@ ul.menu-nav li a.active {
  background-color: #ffffff;
 color: #3b6926;
 padding-bottom: 0.2em;
-border-bottom: 0.45em solid #3b6926;
+border-bottom: 0.49em solid #3b6926;
 }
-
-#float-right-on-navbar{
-    float: right;
-  }
 
 
 
@@ -154,7 +154,7 @@ border-bottom: 0.45em solid #3b6926;
 }
 
 ul.custom-dropdown-content {
-    overflow: hidden;
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   height: 0px;
@@ -165,7 +165,7 @@ ul.custom-dropdown-content {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 
-   transform: translateY(2em);
+    transform: translateY(2em);
   transition: all 0.3s;
 }
 
@@ -194,7 +194,7 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 
 .custom-dropdown:hover ul.custom-dropdown-content {
-   /* display: block;*/
+  /* display: block;*/
  height: auto;
  visibility: visible; 
   opacity: 1;
@@ -239,7 +239,7 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 
 .nav_social_brands{
- position: absolute;
+    position: absolute;
     right: 30px;
     top: 0;
 }
@@ -292,12 +292,7 @@ padding: 0px;
 }
 
 
-@media screen and (max-width: 320px){
-.menu-nav.responsive li {
-    margin-left: -40px !important;
-}
 
-}
 
 
 @media screen and (max-width: 900px) {
@@ -307,16 +302,56 @@ padding: 0px;
     height: 100%; 
 }
 
+.responsive-nav {
+    left: 0;
+  margin-left:0;
+    top: 0;
+    bottom: 0;
+    max-width: 270px;
+    width: 0%;
+    height: 100%;
+        z-index: 13;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .responsive-nav.responsive {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+        overflow-x: hidden;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  .navigation.shadow:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 11;
+  }
+
+.responsive-nav .menu-nav{
+  margin-top: 0px;
+      margin-left: 4px;
+}
 ul.menu-nav li{
-     /* display: none; */
      display: block;
-    visibility: hidden;
     margin-left: -40px;
-    opacity: 0;
-    transition:visibility 0.2s linear,opacity 0.2s linear;
+} 
+
+ul.menu-nav li a.active {
+border-bottom: 0.1em solid #DADADA;
 }
 
- .custom-dropdown .dropbtn, .nav_social_brands {
+.custom-dropdown .dropbtn{
     display: none;
   }
   .navigation a.icon {
@@ -324,7 +359,7 @@ ul.menu-nav li{
     color: #302c2c;
     text-align: center;
     padding: 10px 16px;
-      position: fixed;
+    position: fixed;
     z-index: 13;
     right: 0px;
     text-decoration: none;
@@ -332,19 +367,7 @@ ul.menu-nav li{
 
   }
 
-.navigation .menu-nav {
-      margin-top: 50px;
-     margin-left: 0px;
-              /*these two will help in animation*/
-   max-height: 0;
-  /*transition: max-height 0.5s ease-out;*/
-  transform: translateY(-2em);
-  transition: all 0.3s;
-  }
 
-  #float-right-on-navbar{
-    float: none!important;
-  }
 
 .logo_bg{
 
@@ -352,7 +375,7 @@ background-size: cover;
     background-repeat: no-repeat;
     height: 53px;
     width: 60px;
-    position: unset;
+        position: unset;
     border-radius: 2px;
     margin-top: 0px; 
     margin-left: 0px;
@@ -361,7 +384,13 @@ background-size: cover;
 
 .nav_brand{
   display: flex;
-  height: 60px;
+  background-color: #fff;
+  border-color: #333;
+opacity: 1;
+border-radius: 1px;
+height: 60px;
+/*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
+box-shadow: 0px 4px 4px #ddd !important;
 }
 .nav_brand .brand_text {
     margin-top: 18px;
@@ -373,62 +402,42 @@ background-size: cover;
 .nav_social_brands {
     position: unset;
     right: 0px;
+    margin-left: 8px;
+}
+
+.nav_social_brands #link1_email, .nav_social_brands #link1_phone {
+    margin-top: 0px;
 }
 
 
 }
 
 @media screen and (max-width: 900px) {
-  .menu-nav.responsive {
-    position: relative;
-   /* margin: unset;
-    padding: unset;*/
-
-          /*these two will help in animation*/
-    max-height: 100%; /* make it as big as you think it will ever go */
-    /*transition: max-height 0.5s ease-out;*/
-      transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-  }
-  .navigation{
-    height: auto;
-    display:block;
-  }
-
+  
+ 
   .navigation .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .menu-nav.responsive li{
-   /* display: block; */
-    visibility: visible;
-    opacity: 1;
-    margin-left: -40px;
-      transition:visibility 0.2s linear,opacity 0.2s linear;
-  }
-  .nav_social_brands.show_social_nav{
-    display: block;
-    margin-left: 8px;
-  }
 
-   .menu-nav.responsive .custom-dropdown ul li{
+
+   .menu-nav .custom-dropdown ul li{
     margin-left: 0px;
   }
 
-  .menu-nav.responsive .custom-dropdown {float: none;}
-  .menu-nav.responsive .custom-dropdown-content {position: relative;}
-  .menu-nav.responsive .custom-dropdown .dropbtn {
+  .menu-nav .custom-dropdown {float: none;}
+  .menu-nav .custom-dropdown-content {position: relative;}
+  .menu-nav .custom-dropdown .dropbtn {
     display: block;
     width: 100%;
   }
 }
 
-
-  
 </style>
 </head>
-<body>
+<body>  
+
 
 <div class="navigation" id="navigation">
 
@@ -440,6 +449,9 @@ background-size: cover;
 </div>
    <div class="brand_text">Brunique developers</div>
 </div>
+
+
+<div class="responsive-nav" id="responsive-nav">
 
    <ul class="menu-nav" id="menu-nav">
   <li ><a class="active" href="#home">Home</a></li>
@@ -455,15 +467,28 @@ background-size: cover;
       <li><a href="#">Link 3</a></li>
     </ul>
   </li> 
+
   <li><a href="#about">About</a></li>
+
+   <li class="custom-dropdown">
+    <a class="dropbtn">Dropdown 
+      <i class="ion ion-android-arrow-dropdown"></i>
+    </a>
+    <ul class="custom-dropdown-content">
+      <li><a href="#">Responsive Link 1</a></li>
+      <li><a href="#">Responsive Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </li> 
 
 <li ><a href="#"><i  id="cart-icon" class="ion ion-android-cart"></i> cart  <span id="cartbadge" class="badge_count">1</span>
 </a></li>
 
-
-<li id="float-right-on-navbar"><a href="#">News</a></li>
-<li id="float-right-on-navbar"><a href="#">Sign in</a></li>
-<li id="float-right-on-navbar"><a href="#">Sign up</a></li>
+<li><a href="#about">Live support</a></li>
+<li><a href="#about">Account</a></li>
+<li><a href="#about">Services</a></li>
+<li><a href="#about">Client says</a></li>
+<li><a href="#about">Programmes</a></li>
 
 </ul>
 
@@ -487,14 +512,25 @@ background-size: cover;
 <i class="ion ion-socials ion-social-twitter-outline"></i></a>
 </div>
 
+</div>
+
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<div style="padding-left:16px; margin-top: 100px;">
+<div style="padding-left:16px; margin-top:100px;">
   <h2>Responsive Topnav with Dropdown</h2>
   <p>Resize the browser window to see how it works.</p>
   <p>Hover over the dropdown button to open the dropdown menu.</p>
-   <h2>Responsive Topnav with Dropdown</h2>
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+    <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+    <h2>Responsive Topnav with Dropdown</h2>
   <p>Resize the browser window to see how it works.</p>
   <p>Hover over the dropdown button to open the dropdown menu.</p>
     <h2>Responsive Topnav with Dropdown</h2>
@@ -519,20 +555,22 @@ background-size: cover;
 
 <script>
 function myFunction() {
-  var x = document.getElementById("menu-nav");
-    var s = document.getElementById("nav_social_brands");
-
+  var n = document.getElementById("navigation");
+  var x = document.getElementById("responsive-nav");
+  //  var s = document.getElementById("nav_social_brands");
+   
   
-  if (x.className === "menu-nav") {
+  if (x.className === "responsive-nav") {
     x.className += " responsive";
-    s.className +=" show_social_nav";
+    n.className += " shadow";
+   // s.className +=" show_social_nav";
   } else {
-    x.className = "menu-nav";
-    s.className ="nav_social_brands";
+    x.className = "responsive-nav";
+    n.className = "navigation";
+   // s.className ="nav_social_brands";
   }
 }
 </script>
-
 
 
 

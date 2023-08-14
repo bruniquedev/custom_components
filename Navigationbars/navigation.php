@@ -49,13 +49,19 @@ body {margin:0; font-family: Myriad-Regular;}
 }
 
 .nav_brand{
+        position: fixed;
+    top: 0px;
+    z-index: 13;
+    width: 100%;
+        margin-left: 4px;
 }
 .nav_brand .brand_text{
  
  color: #111;
     font-size: 17px;
     position: absolute;
-    left: 104px;
+    /*left: 104px;*/
+    left: 95px;
     top: 15px;
 }
 
@@ -72,6 +78,23 @@ background-size: cover;
     margin-left: 2px;
     border-radius: 2px;
 
+}
+
+.logo_wrapper{
+    position: absolute;
+  left: 11px;
+  height: 80px;
+    width: 80px;
+     z-index: 999;
+     margin-top: 0px;
+      border-radius: 8px;
+}
+.logo_img{
+
+height:100%;
+/*width: 100%;*/
+ border-radius: 8px;
+ object-fit: contain;
 }
 
 ul.menu-nav li {
@@ -273,6 +296,11 @@ padding: 0px;
 
 @media screen and (max-width: 900px) {
 
+.logo_wrapper{
+  position: unset;
+    height: 100%; 
+}
+
 
 ul.menu-nav li{
       /* display: none; */
@@ -286,11 +314,12 @@ ul.menu-nav li{
     display: none;
   }
   .navigation a.icon {
-    font-size: 20px;
+    font-size: 25px;
     color: #302c2c;
     text-align: center;
     padding: 10px 16px;
-    position: absolute;
+    position: fixed;
+    z-index: 13;
     right: 0px;
     text-decoration: none;
     display: block;
@@ -298,7 +327,7 @@ ul.menu-nav li{
   }
 
 .navigation .menu-nav {
-     margin-top: 0px;
+     margin-top: 50px;
      margin-left: 0px;
 
        /*these two will help in animation*/
@@ -323,6 +352,14 @@ background-size: cover;
 
 .nav_brand{
   display: flex;
+  background-color: #fff;
+  border-color: #333;
+opacity: 1;
+border-radius: 1px;
+height: 60px;
+/*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
+/*box-shadow: 0px 4px 4px #ddd !important;*/
+margin-left: 0px;
 }
 .nav_brand .brand_text {
     margin-top: 18px;
@@ -393,9 +430,13 @@ background-size: cover;
 <div class="navigation" id="navigation">
 
 
+
    <div class="nav_brand">
-  <div class="logo_bg" style="background-image:url(images/logo.png);"></div>
-  <div class="brand_text">Brunique developers</div>
+  <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
+  <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
+  <img src="images/logo.png" alt="logo" class="logo_img" />
+</div>
+   <div class="brand_text">Brunique developers</div>
 </div>
 
    <ul class="menu-nav" id="menu-nav">
