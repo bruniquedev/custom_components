@@ -25,13 +25,76 @@
 
 body {margin:0; font-family: Myriad-Regular;}
 
-.navigation{
-background-color: #fff;
+/** level one navigation**/
+.navigation-container{
+	position: fixed;
+	top: 0px;
+	 width: 100%;
+}
+	.navigation-level-one-container{
+	background-color: #fff;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0px;
+    overflow: hidden;
+    border-color: #333;
+    opacity: 1;
+    border-radius: 1px;
+    /* box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important; */
+    box-shadow: 0px 4px 4px #ddd !important;
+	}
+	.navigation-level-one{
+    margin: 10px auto 10px auto;
+    width: 90%;
+	}
+
+	.level-one-left{
+width: 50%;
+	}
+	.level-one-right{
+width: 50%;
+	}
+a{
+	text-decoration: none;
 }
 
-.responsive-nav{
+.level-one-left	a,.level-one-right a{
+	    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #656565;
+}
+
+.level-one-left	a i{
+    position: relative;
+    top: 3px;
+     color: #656565 !important;
+}
+.menu-nav-level-one a.link-separator{
+margin: 0px 5px 0px 5px;
+}
+
+.level-one-right a{
+	    padding: 0px 10px 0px 10px;
+}
+
+/**end of level one navigation**/
+
+
+
+.navigation-stacked{
+background-color: #fff;
+margin: 0px auto 0px auto;
+    width: 89%;
+        position: relative;
+    top: -31px;
+}
+
+.responsive-nav-stacked{
   background-color: #fff;
-position: fixed;
+position: relative;
 z-index: 12;
 top: 0px;
 width: 100%;
@@ -44,24 +107,24 @@ border-color: #333;
 opacity: 1;
 border-radius: 1px;
 /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
-box-shadow: 0px 4px 4px #ddd !important;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
-.responsive-nav .menu-nav{
+.responsive-nav-stacked .menu-nav-stacked{
      margin-top: 32px;
     padding-top: 0;
     list-style-type: none;
     margin-left: 50px;
 }
 
-.nav_brand{
-      position: fixed;
+.nav_brand_stacked{
+      position: relative;
     top: 0px;
     z-index: 13;
     width: 100%;
         margin-left: 4px;
 }
-.nav_brand .brand_text{
+.nav_brand_stacked .brand_text_stacked{
  
  color: #111;
     font-size: 17px;
@@ -72,7 +135,7 @@ box-shadow: 0px 4px 4px #ddd !important;
 }
 
 
-.logo_bg{
+.logo_bg_stacked{
 
 background-size: cover;
     background-repeat: no-repeat;
@@ -86,7 +149,7 @@ background-size: cover;
 
 }
 
-.logo_wrapper{
+.logo_wrapper_stacked{
     position: absolute;
   left: 11px;
   height: 80px;
@@ -95,7 +158,7 @@ background-size: cover;
      margin-top: 0px;
       border-radius: 8px;
 }
-.logo_img{
+.logo_img_stacked{
 
 height:100%;
 /*width: 100%;*/
@@ -103,11 +166,11 @@ height:100%;
  object-fit: contain;
 }
 
-ul.menu-nav li {
+ul.menu-nav-stacked li {
   display: inline-block;
-     border-bottom: 1px solid #DADADA;
+     /*border-bottom: 1px solid #DADADA;*/
 }
-ul.menu-nav li a {
+ul.menu-nav-stacked li a {
   display: block;
  text-decoration: none;
   color: #111;
@@ -116,32 +179,32 @@ ul.menu-nav li a {
   text-decoration: none;
   font-size: 17px;
 }
-/*.menu-nav li a:hover{
+/*.menu-nav-stacked li a:hover{
   color: #4CAF50;
 }*/
 
-ul.menu-nav li a:hover:not(.active){
+ul.menu-nav-stacked li a:hover:not(.active){
   color: #4CAF50;
 }
-ul.menu-nav li a.active {
+ul.menu-nav-stacked li a.active {
  background-color: #ffffff;
 color: #3b6926;
 padding-bottom: 0.2em;
-border-bottom: 0.49em solid #3b6926;
+/*border-bottom: 0.49em solid #3b6926;*/
 }
 
 
 
-.navigation .icon {
+.navigation-stacked .icon {
   display: none;
 }
 
-.custom-dropdown {
+.custom-dropdown-stacked {
   /*float: left;
   overflow: hidden;*/
 }
 
-.custom-dropdown .dropbtn {
+.custom-dropdown-stacked .dropbtn {
   font-size: 17px;    
   border: none;
   outline: none;
@@ -153,7 +216,7 @@ border-bottom: 0.49em solid #3b6926;
   margin: 0;
 }
 
-ul.custom-dropdown-content {
+ul.custom-dropdown-content-stacked {
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
@@ -169,7 +232,7 @@ ul.custom-dropdown-content {
   transition: all 0.3s;
 }
 
-ul.custom-dropdown-content li {
+ul.custom-dropdown-content-stacked li {
  display: block;
   color: black;
   text-decoration: none;
@@ -177,23 +240,23 @@ ul.custom-dropdown-content li {
   text-align: left;
 }
 
-ul.custom-dropdown-content li a{
+ul.custom-dropdown-content-stacked li a{
   color: black;
 }
 
-.custom-dropdown:hover .dropbtn {
+.custom-dropdown-stacked:hover .dropbtn {
   background-color: #fff;
   color: #111;
 }
 
-ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
+ul.custom-dropdown-content-stacked li a:hover, ul.custom-dropdown-content-stacked li a:hover {
   background-color: #ddd;
   color: black !important;
 }
 
 
 
-.custom-dropdown:hover ul.custom-dropdown-content {
+.custom-dropdown-stacked:hover ul.custom-dropdown-content-stacked {
   /* display: block;*/
  height: auto;
  visibility: visible; 
@@ -205,7 +268,7 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 
 
 
-.badge_count {
+.badge_count_stacked {
   color: #fff;
     background-color: #f32038;
     position: relative;
@@ -238,71 +301,81 @@ ul.custom-dropdown-content li a:hover, ul.custom-dropdown-content li a:hover {
 }
 
 
-.nav_social_brands{
+.nav_social_brands_stacked{
     position: absolute;
     right: 30px;
-    top: 0;
+    top: 10px;
+    display: none;
 }
-.nav_social_brands #link1_email,
-.nav_social_brands #link1_phone{
+.nav_social_brands_stacked #link1_email,
+.nav_social_brands_stacked #link1_phone{
 margin-right: 5px;
-margin-top: 9px;
+color: #646464;
 }
 
-.nav_social_brands a{
+
+.nav_social_brands_stacked a{
    text-decoration: none;
-  color: #3b85bd;
+  color: #646464;
 }
-.nav_social_brands a:hover {
+.nav_social_brands_stacked a:hover {
     color: #23527c;
 }
 
-.ion-socials {
+.ion-socials-stacked {
   padding: 5px;
-  font-size: 25px;
-  width: 25px;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
   border-radius: 5px;
 }
 
-.nav_social_brands #link1_email i,
-.nav_social_brands #link1_phone i{
-padding: 0px;
+.nav_social_brands_stacked #link1_email i,
+.nav_social_brands_stacked #link1_phone i{
+padding: 0px 5px 0px 5px;
     font-size: 20px;
+    color: #646464;
+position: relative;
+    top: 3px;
 }
 
-.ion-social:hover {
+.ion-social-stacked:hover {
     opacity: 0.7;
 }
 
-.ion-social-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.ion-social-twitter-outline {
-  background: #55ACEE;
-  color: white;
-}
-.ion-social-youtube-outline {
-  background: #bb0000;
-  color: white;
+.navbar-brand-social-header-stacked i{
+  color: #7AB730 ;
 }
 
 
 
 
+@media screen and (max-width: 1024px) {
 
-@media screen and (max-width: 900px) {
 
-.logo_wrapper{
+
+.navigation-level-one-container {
+    display: none;
+}
+
+.navigation-stacked {
+    margin: 0px !important;
+    width: 100% !important;
+    position: unset !important;
+}
+
+.nav_brand_stacked {
+    margin-left: 0px !important;
+}
+
+.logo_wrapper_stacked{
   position: unset;
     height: 100%; 
 }
 
-.responsive-nav {
+.responsive-nav-stacked {
+	position: fixed;
+	top: 60px !important;
     left: 0;
   margin-left:0;
     top: 0;
@@ -317,7 +390,7 @@ padding: 0px;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
   }
-  .responsive-nav.responsive {
+  .responsive-nav-stacked.responsive-stacked {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -327,7 +400,7 @@ padding: 0px;
     transform: translateX(0%);
   }
 
-  .navigation.shadow:after {
+  .navigation-stacked.shadow-stacked:after {
     content: "";
     position: fixed;
     left: 0;
@@ -338,23 +411,26 @@ padding: 0px;
     z-index: 11;
   }
 
-.responsive-nav .menu-nav{
+.responsive-nav-stacked .menu-nav-stacked{
   margin-top: 0px;
       margin-left: 4px;
 }
-ul.menu-nav li{
+ul.menu-nav-stacked li{
      display: block;
     margin-left: -40px;
+    border-bottom: 1px solid #DADADA;
 } 
 
-ul.menu-nav li a.active {
+ul.menu-nav-stacked li a.active {
 border-bottom: 0.1em solid #DADADA;
 }
 
-.custom-dropdown .dropbtn{
+
+
+.custom-dropdown-stacked .dropbtn-stacked{
     display: none;
   }
-  .navigation a.icon {
+  .navigation-stacked a.icon {
     font-size: 25px;
     color: #302c2c;
     text-align: center;
@@ -369,7 +445,7 @@ border-bottom: 0.1em solid #DADADA;
 
 
 
-.logo_bg{
+.logo_bg_stacked{
 
 background-size: cover;
     background-repeat: no-repeat;
@@ -382,7 +458,7 @@ background-size: cover;
 
 }
 
-.nav_brand{
+.nav_brand_stacked{
   display: flex;
   background-color: #fff;
   border-color: #333;
@@ -392,43 +468,48 @@ height: 60px;
 /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
 box-shadow: 0px 4px 4px #ddd !important;
 }
-.nav_brand .brand_text {
+.nav_brand_stacked .brand_text_stacked {
     margin-top: 18px;
     color: #111;
     font-size: 18px;
     position: unset;
 }
 
-.nav_social_brands {
+.nav_social_brands_stacked {
     position: unset;
     right: 0px;
     margin-left: 8px;
 }
 
-.nav_social_brands #link1_email, .nav_social_brands #link1_phone {
+.nav_social_brands_stacked #link1_email, .nav_social_brands_stacked #link1_phone {
     margin-top: 0px;
 }
 
 
+.nav_social_brands_stacked{
+	display: unset!important;
 }
 
-@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 1024px) {
   
  
-  .navigation .icon {
+  .navigation-stacked .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
 
 
-   .menu-nav .custom-dropdown ul li{
+   .menu-nav-stacked .custom-dropdown-stacked ul li{
     margin-left: 0px;
   }
 
-  .menu-nav .custom-dropdown {float: none;}
-  .menu-nav .custom-dropdown-content {position: relative;}
-  .menu-nav .custom-dropdown .dropbtn {
+  .menu-nav-stacked .custom-dropdown-stacked {float: none;}
+  .menu-nav-stacked .custom-dropdown-content-stacked {position: relative;}
+  .menu-nav-stacked .custom-dropdown-stacked .dropbtn-stacked {
     display: block;
     width: 100%;
   }
@@ -439,29 +520,57 @@ box-shadow: 0px 4px 4px #ddd !important;
 <body>  
 
 
-<div class="navigation" id="navigation">
+<div class="navigation-container">
+
+<div class="navigation-level-one-container">
+<div class="navigation-level-one flex">
+
+<div class="menu-nav-level-one level-one-left" id="menu-nav-level-one">
+  <a class="navbar-brand-social-header-stacked" href="mailto:bruniquedeveloper@gmail.com"> 
+  <i class=" ion-socials-stacked ion-ios-email"></i>bruniquedeveloper@gmail.com </a>
+   <a class="navbar-brand-social-header-stacked link-separator" href="#">|</a>
+  <a class="navbar-brand-social-header-stacked" href="tel:256 701310265"> <i class=" ion-socials-stacked ion-ios-telephone"></i>+256 701310265 </a>
+ </div>
+
+<div class="menu-nav-level-one level-one-right flex justify-right" id="menu-nav-level-one">
+  <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-facebook"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-linkedin-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-youtube-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-twitter-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-instagram-outline"></i></a>
+</div>
+
+</div>
+</div>	
 
 
-   <div class="nav_brand">
+<div class="navigation-stacked" id="navigation-stacked">
+
+   <div class="nav_brand_stacked">
   <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
-  <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
-  <img src="images/logo.png" alt="logo" class="logo_img" />
+  <div class="logo_wrapper_stacked" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
+  <img src="images/logo.png" alt="logo" class="logo_img_stacked" />
 </div>
-   <div class="brand_text">Brunique developers</div>
+   <div class="brand_text_stacked">Brunique developers</div>
 </div>
 
 
-<div class="responsive-nav" id="responsive-nav">
+<div class="responsive-nav-stacked" id="responsive-nav-stacked">
 
-   <ul class="menu-nav" id="menu-nav">
-  <li ><a class="active" href="#home">Home</a></li>
+   <ul class="menu-nav-stacked" id="menu-nav-stacked">
+  <li ><a class="active-stacked" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li class="custom-dropdown">
-    <a class="dropbtn">Dropdown 
+  <li class="custom-dropdown-stacked">
+    <a class="dropbtn-stacked">Dropdown 
       <i class="ion ion-android-arrow-dropdown"></i>
     </a>
-    <ul class="custom-dropdown-content">
+    <ul class="custom-dropdown-content-stacked">
       <li><a href="#">Responsive Link 1</a></li>
       <li><a href="#">Responsive Link 2</a></li>
       <li><a href="#">Link 3</a></li>
@@ -470,18 +579,18 @@ box-shadow: 0px 4px 4px #ddd !important;
 
   <li><a href="#about">About</a></li>
 
-   <li class="custom-dropdown">
-    <a class="dropbtn">Dropdown 
+   <li class="custom-dropdown-stacked">
+    <a class="dropbtn-stacked">Dropdown 
       <i class="ion ion-android-arrow-dropdown"></i>
     </a>
-    <ul class="custom-dropdown-content">
+    <ul class="custom-dropdown-content-stacked">
       <li><a href="#">Responsive Link 1</a></li>
       <li><a href="#">Responsive Link 2</a></li>
       <li><a href="#">Link 3</a></li>
     </ul>
   </li> 
 
-<li ><a href="#"><i  id="cart-icon" class="ion ion-android-cart"></i> cart  <span id="cartbadge" class="badge_count">1</span>
+<li ><a href="#"><i  id="cart-icon-stacked" class="ion ion-android-cart"></i> cart  <span id="cartbadge-stacked" class="badge_count_stacked">1</span>
 </a></li>
 
 <li><a href="#about">Live support</a></li>
@@ -492,29 +601,32 @@ box-shadow: 0px 4px 4px #ddd !important;
 
 </ul>
 
-<div class="nav_social_brands flex flex-wrap justify-right" id="nav_social_brands">
+<div class="nav_social_brands_stacked flex flex-wrap justify-right" id="nav_social_brands_stacked ">
 
-  <a class="navbar-brand-social-header" 
+  <a class="navbar-brand-social-header-stacked" 
   id="link1_email" href="mailto:bruniquedeveloper@gmail.com"> 
-  <i class=" ion-socials ion-ios-email"></i>bruniquedeveloper@gmail.com </a>
+  <i class=" ion-socials-stacked ion-ios-email"></i>bruniquedeveloper@gmail.com </a>
 
-  <a class="navbar-brand-social-header" id="link1_phone" href="tel:256 701310265"> <i class=" ion-socials ion-ios-telephone"></i>256 701310265 </a>
+  <a class="navbar-brand-social-header-stacked" id="link1_phone" href="tel:256 701310265"> <i class=" ion-socials-stacked ion-ios-telephone"></i>+256 701310265 </a>
 
-  <a class="navbar-brand-social-header" id="link1_phone" href="tel:256 779162288"> <i class=" ion-socials ion-ios-telephone"></i>256 779162288 </a>
+  <a class="navbar-brand-social-header-stacked" id="link1_phone" href="tel:256 779162288"> <i class=" ion-socials-stacked ion-ios-telephone"></i>+256 779162288 </a>
 
- <a class="navbar-brand-social-header" href="#" target="_blank" > 
-<i class="ion ion-socials ion-social-facebook"></i></a>
- <a class="navbar-brand-social-header" href="#" target="_blank" > 
-<i class="ion ion-socials ion-social-twitter-outline"></i></a>
- <a class="navbar-brand-social-header" href="#" target="_blank" > 
-<i class="ion ion-socials ion-social-youtube-outline"></i></a>
- <a class="navbar-brand-social-header" href="#" target="_blank" > 
-<i class="ion ion-socials ion-social-twitter-outline"></i></a>
+  <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-facebook"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-linkedin-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-youtube-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-twitter-outline"></i></a>
+ <a class="navbar-brand-social-header-stacked" href="#" target="_blank" > 
+<i class="ion ion-socials-stacked ion-social-instagram-outline"></i></a>
 </div>
 
 </div>
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 </div>
 
 <div style="padding-left:16px; margin-top:100px;">
@@ -555,19 +667,19 @@ box-shadow: 0px 4px 4px #ddd !important;
 
 <script>
 function myFunction() {
-  var n = document.getElementById("navigation");
-  var x = document.getElementById("responsive-nav");
+  var n = document.getElementById("navigation-stacked");
+  var x = document.getElementById("responsive-nav-stacked");
   //  var s = document.getElementById("nav_social_brands");
    
   
-  if (x.className === "responsive-nav") {
-    x.className += " responsive";
-    n.className += " shadow";
-   // s.className +=" show_social_nav";
+  if (x.className === "responsive-nav-stacked") {
+    x.className += " responsive-stacked";
+    n.className += " shadow-stacked";
+   // s.className +=" show_social_nav_stacked";
   } else {
-    x.className = "responsive-nav";
-    n.className = "navigation";
-   // s.className ="nav_social_brands";
+    x.className = "responsive-nav-stacked";
+    n.className = "navigation-stacked";
+   // s.className ="nav_social_brands_stacked";
   }
 }
 </script>
