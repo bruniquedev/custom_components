@@ -198,10 +198,15 @@ padding-bottom: 0.2em;
 .navigation-stacked .icon {
   display: none;
 }
+.navigation-stacked .mobile-cart-icon-stacked{
+display: none;
+}
+
 
 .custom-dropdown-stacked {
   /*float: left;
   overflow: hidden;*/
+  cursor: pointer;
 }
 
 .custom-dropdown-stacked .dropbtn {
@@ -502,6 +507,20 @@ box-shadow: 0px 4px 4px #ddd !important;
     top: 0;
   }
 
+       .navigation-stacked a.mobile-cart-icon-stacked {
+    font-size: 25px;
+    color: #002855;
+    text-align: center;
+    padding: 10px 16px;
+    position: fixed;
+    z-index: 13;
+    right: 35px;
+    top: 0px;
+    text-decoration: none;
+    display: block;
+
+  }
+
 
    .menu-nav-stacked .custom-dropdown-stacked ul li{
     margin-left: 0px;
@@ -624,6 +643,11 @@ box-shadow: 0px 4px 4px #ddd !important;
 </div>
 
 </div>
+
+<a href="/shoppingcart" class="mobile-cart-icon-stacked">
+<i  id="cart-icon-stacked" class="ion-android-cart"></i><span id="cartbadge-stacked" 
+class="badge_count_stacked mycart_product_count">5</span>
+</a>
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
