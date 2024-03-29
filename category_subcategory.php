@@ -62,7 +62,7 @@
 }
 
 .category_nav .category_list>li>a:hover,
- .category_nav .category-list>li>a:focus{
+ .category_nav .category_list>li>a:focus{
     color: #F8694A;
   }
 

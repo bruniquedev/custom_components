@@ -757,10 +757,50 @@ position: absolute;
   </a>  
    </div>
 
-       <div class="item-eui">
-  <a href="" class="item-eui-link"> 
+       <div class="item-eui custom-dropdown-eui">
+  <a href="#" class="item-eui-link dropbtn-eui"> 
   <span class="item-title-eui item-dropdown-eui">Categories <i class="ion ion-android-arrow-dropdown"></i></span>
-  </a>  
+  </a>
+   <div class="custom-dropdown-content-eui custom-category-dropdown-content-eui">
+
+<div class="category_nav_eui">
+<span class="category_header_eui">Categories <i class="ion ion-ios-list-outline"></i></span>
+<ul class="category_list_eui">
+
+<?php 
+
+for($j=1; $j<=50; $j++){ 
+ $active_subcates="";       
+if($j==1){
+$active_subcates=" active ";
+}
+?>    
+<li class="drop-down-eui side-dropdown-eui">
+  <a class="drop-down-toggle-eui">Featured - <?php echo$j; ?><i class="ion ion-ios-arrow-forward"></i></a>
+  <div class="drop-down-content-eui custom_menu_eui <?php echo$active_subcates; ?>">
+    <h3 class="list-links-title-eui">Featured - <?php echo$j; ?></h3>
+    <ul class="list_links_eui">
+<?php for($i=1; $i<=100; $i++){ ?>
+    <li><a href="#">
+        <div class="category-content-eui">
+        <div class="category-circle-img-container-eui">
+       <img src="images/shop-11.jpg" alt="Hand Tools" class="img-category-thumb-eui">
+       <img class="top-icon-eui-category" src="images/hot.webp" alt="image">
+     </div>
+     <div class="category-item-name">Women's winter sports clothing - <?php echo$i; ?></div>
+   </div>
+ </a></li>
+ <?php } ?>
+  </ul>
+  </div>
+</li>
+<?php } ?>
+
+<li><a href="products.php">View All</a></li>
+</ul>
+</div>
+
+    </div>   
    </div>
 
 
@@ -826,11 +866,16 @@ position: absolute;
     height: 0.85rem;
 }
 
+
+
+
+/*====styling dropdowns=====*/
+
 .item-title-eui.item-dropdown-eui i{
 content: "\f35f"; /* Unicode for ion-android-arrow-dropdown */
  font-size: 20px;
     position: absolute;
-    top: -4px;
+    /*top: -4px;*/
     margin-left: 4px; 
       transform: rotate(0deg);
   transition: transform .2s linear, -webkit-transform .2s linear;
@@ -842,6 +887,419 @@ content: "\f35f"; /* Unicode for ion-android-arrow-dropdown */
 content: "\f365"; /* Change to ion-android-arrow-dropup on hover */
 }
 
+.custom-dropdown-eui {
+position: relative;
+}
+
+.custom-dropdown-eui .dropbtn-eui {
+  font-size: 17px;    
+  cursor: pointer;
+  color: #111;
+  margin: 0px 8px;
+}
+
+ul.custom-dropdown-content-eui,.custom-dropdown-content-eui {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+ /*display: none;*/
+  position: fixed;
+      top: 114px;
+      z-index: 5;
+  background-color: #f9f9f9;
+  padding: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transform: translateY(2em);
+  transition: all 0.3s;
+}
+
+ul.custom-dropdown-content-eui:before, .custom-dropdown-content-eui:before{
+  content: '';
+    width: 10px;
+    height: 10px;
+    background: #100f22;
+    border: 1px #d5d5d5ee solid;
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-50%) rotateZ(45deg);
+    position: absolute;
+    top: -5px;
+    left: 49%;
+    z-index: 1;
+}
+
+
+
+ul.custom-dropdown-content-eui li {
+ display: block;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.custom-dropdown-content-eui li a{
+  color: black;
+     display: block;
+    text-decoration: none;
+    color: #111;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+ul.custom-dropdown-content-eui li a i{
+    font-size: 17px;
+}
+
+/*.custom-dropdown-eui:hover .dropbtn-eui,*/
+.custom-dropdown-eui:hover {
+  background-color:rgba(75, 192, 192, 0.2);
+  border-color : rgb(75, 192, 192);
+  border-width: 1px;
+  color: #fff;
+      padding: 27px 0px
+}
+
+ul.custom-dropdown-content-eui li a:hover{
+  background-color: #fff;
+  color: black;
+   /*color: #ef9e41 !important;*/
+}
+
+.custom-dropdown-eui:hover .dropbtn-eui .item-dropdown-eui i::before{
+content: "\f365"; /* Change to ion-android-arrow-dropup on hover */
+}
+
+ul.custom-dropdown-content-eui li.active, ul.custom-dropdown-content-eui li a.active{
+ background-color: #fff;
+  color: black;
+}
+
+
+.custom-dropdown-eui:hover ul.custom-dropdown-content-eui, .custom-dropdown-eui:hover .custom-dropdown-content-eui {
+  /* display: block;*/
+ height: auto;
+ visibility: visible; 
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+
+}
+/*====/styling dropdowns=====*/
+
+/*====styling category dropdown=====*/
+.custom-category-dropdown-content-eui{
+        margin-left: -200px;
+            height: 480px!important;
+}
+/*styling a cool design*/
+.category_nav_eui {
+    float: left;
+    /*width: 270px;*/
+    width: 775px;
+}
+.category_nav_eui .category_header_eui {
+    padding: 15px;
+    display: block;
+    text-transform: uppercase;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+}
+.category_nav_eui .category_header_eui > i {
+    float: right;
+    line-height: 20px;
+}
+
+/*real one starts here*/
+
+.category_nav_eui .category_list_eui {
+
+    width: 195px;
+    background-color: #FFF;
+    border-left: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    height: 430px;
+     overflow: auto;
+}
+.category_list_eui {
+    margin-bottom: 10%;
+}
+
+.category_list_eui::-webkit-scrollbar, .custom_menu_eui::-webkit-scrollbar {
+width: 0px;
+}
+
+.category_list_eui:hover::-webkit-scrollbar,.custom_menu_eui:hover::-webkit-scrollbar {
+    width: 3px;
+     -webkit-transition: all .5s;
+}
+
+.category_list_eui::-webkit-scrollbar-thumb,.custom_menu_eui::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+  margin: 2px;
+ border: 3px solid transparent;
+   border-radius: 3px;
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.category_list_eui::-webkit-scrollbar-track, .custom_menu_eui::-webkit-scrollbar-track {
+ border-radius: 3px;
+ background-color: #f9f9f9;
+ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+ transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.category_nav_eui .category_list_eui > li {
+   height: 30px;
+}
+.category_nav_eui .category_list_eui > li+li {
+    /*border-top: 1px solid #DADADA;*/
+}
+.category_nav_eui .category_list_eui > li > a {
+    font-size: 13px;
+    display: block;
+    padding: 6px;
+    /* text-transform: uppercase; */
+}
+.category_nav_eui .category_list_eui > li > a:hover,
+.category_nav_eui .category_list_eui > li:hover
+ .category_nav_eui .category_list_eui > li > a:focus{
+        color: #333;
+    background-color: rgb(87 138 138 / 20%);
+    border-color: rgb(75, 192, 192);
+    border-width: 1px;
+    padding: 10px 3px;
+    cursor: pointer;
+  }
+  .category_list_eui li a{
+    text-decoration: none;
+    color: #000;
+  }
+.category_nav_eui .category_list_eui > li.drop-down-eui > .drop-down-toggle-eui > i {
+    float: right;
+    line-height: 20px;
+}
+
+.drop-down-eui.side-dropdown-eui{
+position: relative;
+}
+
+.drop-down-eui a{
+  /* box-shadow: 0 2px 5px #ccc;*/
+background: #fff;
+margin-top: 5px;
+  transition: 0.5s;
+    border-radius: .25rem!important;
+}
+
+.drop-down-eui a:hover {
+  color: #30323a;
+    transform: scale(1);
+  transition: 0s;
+}
+
+.drop-down-toggle-eui {
+  color: #000;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+
+}
+.custom_menu_eui {
+  display: none;
+    /*position: absolute;*/
+    position: fixed;
+    left: 196px;
+    top: 54px;
+    padding: 15px;
+    background: #FFF;
+    -webkit-box-shadow: 0px 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0px 6px 12px rgb(0 0 0 / 18%);
+    z-index: 1;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+     transition: transform .3s ease-out;
+}
+
+
+
+.drop-down-eui.side-dropdown-eui > .custom_menu_eui {
+    border-left: 1px solid #c0c0c0;
+    overflow: auto;
+    width: 545px;
+    height: 400px!important;
+    /*-webkit-transform: translate(15px, 0px);
+    -ms-transform: translate(15px, 0px);
+    transform: translate(15px, 0px);*/
+
+}
+
+.list-links-title-eui{
+  color: #333;  
+  font-size: 13px;
+}
+
+.list_links_eui{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list_links_eui li{
+    width: 108px;
+}
+
+.list_links_eui li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-transform: uppercase; */
+    padding: 2px 0px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.category-circle-img-container-eui {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    display: inline-block;
+    position: relative;
+    
+}
+.img-category-thumb-eui {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+}
+.top-icon-eui-category{
+    position: absolute;
+ top: 1px;
+    right: -0.2rem;
+    width: 1.99rem;
+    height: 0.85rem;
+}
+.category-item-name {
+      font-size: 14px;
+    text-align: center;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.drop-down-content-eui .list_links_eui li a {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-down-eui:hover .drop-down-content-eui,.drop-down-eui:hover .custom_menu_eui {
+  display: block;
+  transform: translate(0px, 0px);
+}
+.custom_menu_eui.active{
+display: block;
+}
+
+.drop-down-eui:hover .drop-down-toggle-eui {
+
+          color: #333;
+    background-color: rgb(87 138 138 / 20%);
+    border-color: rgb(75, 192, 192);
+    border-width: 1px;
+    padding: 10px 3px;
+    cursor: pointer;
+}
+.drop-down-content-eui a:hover {
+    background-color: #ddd;
+}
+
+
+ @media only screen and (min-width: 1424px) and (max-width: 1924px)  {
+.custom-category-dropdown-content-eui{
+        margin-left: -200px;
+            height: 500px!important;
+}
+.drop-down-eui.side-dropdown-eui > .custom_menu_eui {
+height: 420px!important;
+    margin-bottom: 200px;
+    }
+
+    .category_nav_eui .category_list_eui{
+        height: 450px!important;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+.custom-category-dropdown-content-eui {
+    margin-left: -209px;
+}
+.category_nav_eui {
+width: 361px;
+}
+.category_nav_eui .category_list_eui {
+    width: 96px;
+}
+.category_nav_eui .category_list_eui > li {
+    height: auto;
+}
+.custom_menu_eui {
+left: 96px;
+}
+.drop-down-eui.side-dropdown-eui > .custom_menu_eui {
+    width: 240px;
+    }
+
+.list_links_eui {
+width: 240px;
+}
+
+    .list_links_eui li {
+    width: 60px;
+}
+
+.category-circle-img-container-eui {
+    width: 50px;
+    height: 50px;
+    }
+    .img-category-thumb-eui {
+    width: 48px;
+    height: 48px;
+}
+.top-icon-eui-category {
+    right: -0.5rem;
+    width: 1.5rem;
+    height: 0.8rem;
+}
+.category-item-name {
+    font-size: 12px;
+}
+
+ } 
+
+
+/*====/styling category dropdown=====*/
 </style>
 
 <div class="separate-eui"></div>
@@ -857,7 +1315,7 @@ content: "\f365"; /* Change to ion-android-arrow-dropup on hover */
 
 <style type="text/css">
     .separate-eui{
-        width: 30px;
+        width: 10px;
     }
   .search-form-container {
     position: relative;
@@ -933,16 +1391,23 @@ input.search-input-eui[type="text"] {
 
 </style>
 
-<div class="separate-eui2"></div>
+<div class="separate-eui"></div>
 
-   <div class="item-eui">
-  <a href="" class="item-eui-link">
+   <div class="item-eui custom-dropdown-eui">
+  <a href="" class="item-eui-link dropbtn-eui">
    <i class="ion ion-android-person user-icon"></i>
    <div class="item-eui-desc"> 
-   <div class="item-title-eui item-text-eui">Sign in / Sign up</div>  
-  <div class="item-title-eui sm-eui">Orders & Account</div>
+   <div class="item-title-eui item-text-eui item-dropdown-eui">Orders &<i class="ion ion-android-arrow-dropdown"></i></div>  
+  <div class="item-title-eui sm-eui">Account</div>
 </div>
-  </a>  
+  </a> 
+  <ul class="custom-dropdown-content-eui">
+<li><a href="/orderhistory"><i class="ion ion-eye"></i> Orders history</a></li>
+<li><a href="/orderhistory"><i class="ion ion-star"></i> Review</a></li>
+<li><a href="/orderhistory"><i class="ion ion-eye"></i> Orders history</a></li>
+<li><a href="/orderhistory"><i class="ion ion-eye"></i> Orders history</a></li>
+<li><a href="/orderhistory"><i class="ion ion-eye"></i> Orders history</a></li>
+    </ul> 
    </div>
 
    <div class="item-eui">
@@ -961,8 +1426,9 @@ input.search-input-eui[type="text"] {
 
      <div class="item-eui">
   <a href="" class="item-eui-link">
-   <i class="ion ion-android-cart cart-icon-eui"></i>   
-  <span class="item-title-eui">Cart</span>
+   <i class="ion ion-android-cart cart-icon-eui"></i> 
+   <span class="eui-cart-badge">2</span>  
+  <span class="item-title-eui">Cart </span>
   </a>  
    </div>
 
@@ -988,6 +1454,36 @@ input.search-input-eui[type="text"] {
     height: 20px;
     font-size: 20px;
    }
+
+   .eui-cart-badge {
+      font-size: 12px;
+       width: 15px;
+    height: 15px;
+    margin: 2px 1px 2px 2px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ff9800;
+    display: inline-block;
+        position: absolute;
+        top: -15px;
+    left: 18px;
+    text-align: center;
+}
+
+.eui-badge {
+      font-size: 13px;
+    width: 17px;
+    height: 17px;
+    margin: 2px 1px 2px 2px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f32038;
+    display: inline-block;
+        position: absolute;
+    top: -5px;
+    text-align: center;
+}
+
 
 </style>
 </div>
@@ -1029,7 +1525,7 @@ input.search-input-eui[type="text"] {
  <div ><i class="ion ion-android-person Icon-eui"></i></div>  
   </a>
    <a href="" class="icon-wrap-eui">
- <div><i class="ion ion-android-cart Icon-eui"></i></div>  
+ <div><i class="ion ion-android-cart Icon-eui"></i> <span class="eui-cart-badge">2</span></div>  
   </a>
 </div>
 </div>
@@ -1040,7 +1536,7 @@ input.search-input-eui[type="text"] {
 }
 
     @media screen and (max-width: 600px){
-
+   
 .display-none-onmobile{
     display: none!important;
 }
@@ -1132,6 +1628,11 @@ width: 17px;
 .icon-wrap-eui{
     color: #fff;
     margin-right: 14px;
+    position: relative;
+}
+.eui-cart-badge{
+        top: -8px;
+    left: 10px;
 }
 .Icon-eui{
  width: 20px;
@@ -1142,6 +1643,8 @@ font-size: 23px;
 
 
 }
+
+
 </style>
 
 <!--Nav tabbed like-->
