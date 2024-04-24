@@ -1,0 +1,94 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 15px;
+  aspect-ratio: 5;
+  -webkit-mask: linear-gradient(90deg,#0000 ,#000 20% 80%,#0000);
+  background: radial-gradient(closest-side at 37.5% 50%,#000 94%,#0000) 0/calc(80%/3) 100%;
+  animation: l48 .75s infinite linear;
+}
+@keyframes l48 {
+  100% {background-position: 36.36%}
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  clip-path: inset(-45px);
+  box-shadow: -60px 15px,-60px 15px,-60px 15px;
+  transform: translateY(-15px);
+  animation: l19 1s infinite linear;
+}
+@keyframes l19{ 
+  16.67% {box-shadow:-60px 15px,-60px 15px,19px 15px}
+  33.33% {box-shadow:-60px 15px,  0px 15px,19px 15px}
+  40%,60%{box-shadow:-19px 15px,  0px 15px,19px 15px}
+  66.67% {box-shadow:-19px 15px,  0px 15px,60px 15px}
+  83.33% {box-shadow:-19px 15px, 60px 15px,60px 15px}
+  100%   {box-shadow: 60px 15px, 60px 15px,60px 15px}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#ffa516 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#ffa516);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 4px;
+  width: 130px;
+  --c:no-repeat linear-gradient(#6100ee 0 0);
+  background: var(--c),var(--c),#d7b8fc;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 90px;
+  height: 14px;
+  color: #000;
+  background: 
+    radial-gradient(circle 10px at right 7px top 50%,#0000 92%,currentColor),
+    radial-gradient(circle 10px at right 0   top 50%,currentColor 92%,#0000);
+  background-size: calc(100%/3) 100%; 
+  background-position: 50% 0%;
+  animation: l5 .5s infinite linear;
+}
+@keyframes l5 {
+    100% {background-position: 0% 0%}
+}
+
+https://css-loaders.com/infinity/
+https://codepen.io/stoepke/pen/QOOqGW
