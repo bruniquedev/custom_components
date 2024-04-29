@@ -33,8 +33,8 @@
     font-family: Raleway-Bold;  
     src: url(fonts/raleway/Raleway-Bold.ttf) format("truetype");
 }
-/*
-@font-face{
+
+/*@font-face{
     font-family: Raleway-BoldItalic;  
     src: url(fonts/raleway/Raleway-BoldItalic.ttf) format("truetype");
 }
@@ -60,13 +60,13 @@
 @font-face{
     font-family: Raleway-MediumItalic;  
     src: url(fonts/raleway/Raleway-MediumItalic.ttf) format("truetype");
-}
-*/
+}*/
+
 
 body {margin:0; font-family: Myriad-Regular;}
 
   
-    .Navigationair-bar{
+  .Navigationair-slidairbar{
          position: fixed;
        background-color: #1f2533;
          z-index: 12;
@@ -79,17 +79,17 @@ body {margin:0; font-family: Myriad-Regular;}
   /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
   box-shadow: 0px 4px 4px #ddd !important;
     }
-    .Navigationair-bar .Navigationair-bar-top{
+    .Navigationair-slidairbar .Navigationair-slidairbar-top{
          margin: auto 2rem;
     width: 95%; 
            
     }
- .Navigationair-bar-top .bar-top-col .nav_social_brands a{
+ .Navigationair-slidairbar-top .bar-top-col .nav_social_brands a{
       color: white;
     font-size: 15px;
     margin-right: 10px;
  }   
-.Navigationair-bar-top .bar-top-col .nav_social_brands a i{
+.Navigationair-slidairbar-top .bar-top-col .nav_social_brands a i{
     padding: 0px;
     font-size: 18px;
     position: relative;
@@ -97,7 +97,7 @@ body {margin:0; font-family: Myriad-Regular;}
     color: #fff !important;
 }
 
-.Navigationair-bar .navigation {
+.Navigationair-slidairbar .navigation {
   position: relative;
   max-height: 48px;
   width: 100%;
@@ -107,26 +107,50 @@ body {margin:0; font-family: Myriad-Regular;}
     border-color: #ffffff;
       border: 1px solid transparent;
       border-bottom: 1px solid #f47d23 !important;
-      font-family: Raleway-Bold;
       overflow: hidden; 
-      transition: max-height 0.3s linear; 
 }
 
-.Navigationair-bar .navigation .menu-nav{
+.Navigationair-slidairbar .responsive-nav{
+        max-height: 48px;
+    position: relative;
+    font-family: Raleway-Bold;
+  background-color: #fff;
+margin: 0;
+padding: 0;
+margin-bottom: 0px;
+overflow: hidden;
+border-color: #333;
+opacity: 1;
+border-radius: 1px;
+}
+
+
+.Navigationair-slidairbar .responsive-nav .menu-nav{
+     margin-top: 31px;
+    padding-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+
+
+.Navigationair-slidairbar .navigation .menu-nav{
       margin-top: 0;
     padding-top: 0;
   list-style-type: none;
 
 }
 
-.Navigationair-bar .nav_brand{
+.Navigationair-slidairbar .nav_brand{
      /*   position: fixed;
     top: 0px;
     z-index: 13;
     width: 100%;*/
         margin-left: 4px;
 }
-.Navigationair-bar .nav_brand .brand_text{
+.Navigationair-slidairbar .nav_brand .brand_text{
   margin-top: 14px;
   color: #000;
   font-size: 16px;
@@ -135,7 +159,7 @@ body {margin:0; font-family: Myriad-Regular;}
 }
 
 
-.Navigationair-bar .logo_bg{
+.Navigationair-slidairbar .logo_bg{
 
   background-size: cover;
     background-repeat: no-repeat;
@@ -147,7 +171,7 @@ margin-top: -15px;*/
 
 }
 
-.Navigationair-bar  .logo_wrapper{
+.Navigationair-slidairbar  .logo_wrapper{
    /* position: absolute;
   left: 11px;*/
   height: 50px;
@@ -156,7 +180,7 @@ margin-top: -15px;*/
      margin-top: 0px;
       border-radius: 8px;
 }
-.Navigationair-bar  .logo_img{
+.Navigationair-slidairbar  .logo_img{
 
 height:100%;
 /*width: 100%;*/
@@ -164,11 +188,11 @@ height:100%;
  object-fit: contain;
 }
 
-.Navigationair-bar .navigation  ul.menu-nav li {
+.Navigationair-slidairbar .navigation  ul.menu-nav li {
   display: inline-block;
  
 }
-.Navigationair-bar .navigation ul.menu-nav li a {
+.Navigationair-slidairbar .navigation ul.menu-nav li a {
   display: block;
  text-decoration: none;
   color: #000;
@@ -181,26 +205,26 @@ height:100%;
   color: #4CAF50;
 }*/
 
-.Navigationair-bar .navigation ul.menu-nav li a:hover:not(.active){
+.Navigationair-slidairbar .navigation ul.menu-nav li a:hover:not(.active){
   color: #000;
 }
-.Navigationair-bar .navigation ul.menu-nav li a.active {
+.Navigationair-slidairbar .navigation ul.menu-nav li a.active {
   
   color: #f37c20;
 }
 
 
 
-.Navigationair-bar .navigation .icon {
+.Navigationair-slidairbar .navigation .icon {
   display: none;
 }
 
-.Navigationair-bar .navigation .custom-dropdown {
+.Navigationair-slidairbar .navigation .custom-dropdown {
   /*float: left;
   overflow: hidden;*/
 }
 
-.Navigationair-bar .navigation .custom-dropdown .dropbtn {
+.Navigationair-slidairbar .navigation .custom-dropdown .dropbtn {
   font-size: 17px;    
   border: none;
   outline: none;
@@ -210,7 +234,7 @@ height:100%;
   margin: 0;
 }
 
-.Navigationair-bar .navigation ul.custom-dropdown-content {
+.Navigationair-slidairbar .navigation ul.custom-dropdown-content {
     overflow: hidden;
   visibility: hidden;
   opacity: 0;
@@ -226,7 +250,7 @@ height:100%;
   transition: all 0.3s;
 }
 
-.Navigationair-bar .navigation ul.custom-dropdown-content li {
+.Navigationair-slidairbar .navigation ul.custom-dropdown-content li {
  display: block;
   color: black;
   text-decoration: none;
@@ -234,24 +258,24 @@ height:100%;
   text-align: left;
 }
 
-.Navigationair-bar .navigation ul.custom-dropdown-content li a{
+.Navigationair-slidairbar .navigation ul.custom-dropdown-content li a{
   color: #000;
 }
 
-.Navigationair-bar .navigation .custom-dropdown:hover .dropbtn {
+.Navigationair-slidairbar .navigation .custom-dropdown:hover .dropbtn {
   background-color: #fff;
   color: #000;
 }
 
-.Navigationair-bar .navigation ul.custom-dropdown-content li a:hover, 
-.Navigationair-bar .navigation ul.custom-dropdown-content li a:hover {
+.Navigationair-slidairbar .navigation ul.custom-dropdown-content li a:hover, 
+.Navigationair-slidairbar .navigation ul.custom-dropdown-content li a:hover {
   background-color: #ddd;
   color: black !important;
 }
 
 
 
-.Navigationair-bar .navigation .custom-dropdown:hover ul.custom-dropdown-content {
+.Navigationair-slidairbar .navigation .custom-dropdown:hover ul.custom-dropdown-content {
    /* display: block;*/
  height: auto;
  visibility: visible; 
@@ -324,22 +348,22 @@ justify-content: space-between;
 }
 
 
-.Navigationair-bar .nav_social_brands{
+.Navigationair-slidairbar .nav_social_brands{
 position: relative;
     margin: 4px auto 10px auto;
 }
 
-.Navigationair-bar .nav_social_brands a {
+.Navigationair-slidairbar .nav_social_brands a {
     text-decoration: none;
     color: #3b85bd;
     font-size: 14px;
 }
 
-.Navigationair-bar .navbar-brand-social-header i {
+.Navigationair-slidairbar .navbar-brand-social-header i {
     color: #7AB730;
 }
 
-.Navigationair-bar .ion-socials {
+.Navigationair-slidairbar .ion-socials {
     padding: 5px;
     font-size: 20px;
     text-align: center;
@@ -348,20 +372,20 @@ position: relative;
     border-radius: 5px
 }
 
-.Navigationair-bar .ion-social:hover {
+.Navigationair-slidairbar .ion-social:hover {
     opacity: 0.7;
 }
 
 
 @media screen and (max-width: 320px){
-.Navigationair-bar .navigation .menu-nav.responsive li {
+.Navigationair-slidairbar .navigation .menu-nav li {
     margin-left: -40px !important;
 }
 
 }
 
 @media screen and (max-width: 600px){
- .Navigationair-bar-top > div > .bar-top-col:nth-child(2) {
+ .Navigationair-slidairbar-top > div > .bar-top-col:nth-child(2) {
     display: none;
   }
 
@@ -371,45 +395,22 @@ position: relative;
 
 @media screen and (max-width: 1024px) {
 
-.Navigationair-bar .navigation .nav_brand {
-    height: 50px;
-}
-
-.Navigationair-bar .navigation .logo_wrapper{
-  position: unset;
-    height: 100%; 
-}
-.Navigationair-bar .navigation .nav_brand .brand_text {
-    margin-top: 14px;
-    }
-
-.Navigationair-bar .navigation ul.menu-nav li{
-        /* display: none; */
-     display: block;
-    visibility: hidden;
-    margin-left: -40px;
-    opacity: 0;
-    transition:visibility 0.2s linear,opacity 0.2s linear;
-}
-
-.Navigationair-bar .Navigationair-bar-top {
+.Navigationair-slidairbar .Navigationair-slidairbar-top {
     margin: auto auto;
   }
  .bar-top-col .nav_social_brands {
     display: flex;
   }
 
- .Navigationair-bar .navigation .custom-dropdown .dropbtn, .nav_social_brands {
-    display: none;
-  }
-   .Navigationair-bar .navigation{
+ 
+   .Navigationair-slidairbar .navigation{
     display:block;
   }
-.Navigationair-bar .navigation.h-auto{
+.Navigationair-slidairbar .navigation.h-auto{
       transition: max-height 0.5s linear;
     max-height: 1000px!important;
   }
-  .Navigationair-bar .navigation a.icon {
+  .Navigationair-slidairbar .navigation a.icon {
        font-size: 20px;
     color: #1f2533;
     text-align: center;
@@ -418,10 +419,85 @@ position: relative;
     right: 0px;
     text-decoration: none;
     display: block;
-
+   z-index: 13;
   }
 
-.Navigationair-bar .navigation .menu-nav{
+
+
+
+.Navigationair-slidairbar .responsive-nav {
+    position: fixed;
+    left: 0;
+  margin-left:0;
+    top: 96px;
+    bottom: 0;
+    max-width: 270px;
+    max-height: 100%;
+    width: 0%;
+    height: 100%;
+    width: 100%;
+    display: block;
+        z-index: 13;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+ .Navigationair-slidairbar .responsive-nav.responsive {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+        overflow-x: hidden;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    /*  box-shadow: 0px 20px 30px 3px rgb(0 0 0 / 55%) !important;*/
+box-shadow: 0px 4px 4px #ddd !important;
+  }
+
+ .Navigationair-slidairbar .navigation.shadow:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 95px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 11;
+  }
+
+  .Navigationair-slidairbar .responsive-nav .menu-nav{
+  margin-top: 0px;
+      margin-left: 0px;
+      display: block;
+    justify-content: flex-end;
+    width: auto;
+        font-family: "Myriad-Regular";
+}
+
+
+.Navigationair-slidairbar .navigation .nav_brand {
+    height: 50px;
+}
+
+.Navigationair-slidairbar .navigation .logo_wrapper{
+  position: unset;
+    height: 100%; 
+}
+.Navigationair-slidairbar .navigation .nav_brand .brand_text {
+    margin-top: 14px;
+    }
+
+.Navigationair-slidairbar .navigation ul.menu-nav li{
+ display: block;
+    border-bottom: 1px solid #DADADA;
+    margin-left: -40px;
+}
+
+
+
+.Navigationair-slidairbar .navigation .menu-nav{
   width: auto;
    max-height: 1000px;
    position: relative;
@@ -433,40 +509,42 @@ position: relative;
 }
 
 
-  .Navigationair-bar .navigation .menu-nav.responsive {
-  /*  position: relative;
-   margin: 0;*/
-    /*max-height: 1000px;
-    visibility: visible;
-    opacity: 1;*/
-  }
 
-.Navigationair-bar .navigation .icon {
+
+.Navigationair-slidairbar .navigation .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .Navigationair-bar .navigation .menu-nav.responsive li{
+  .Navigationair-slidairbar .navigation .menu-nav li{
   /* display: block; */
     visibility: visible;
     opacity: 1;
     margin-left: -40px;
       transition:visibility 0.2s linear,opacity 0.2s linear;
   }
-  .Navigationair-bar .navigation .nav_social_brands.show_social_nav{
+
+.Navigationair-slidairbar .navigation ul.menu-nav li a {
+padding: 10px 16px;
+font-size: 15px;
+}
+
+  .Navigationair-slidairbar .navigation .nav_social_brands.show_social_nav{
     display: block;
     margin-left: 8px;
   }
 
-   .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown ul li{
+   .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown ul li{
     margin-left: 0px;
   }
 
-  .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown {float: none;}
-  .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown-content {position: relative;}
-  .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown .dropbtn {
+  .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown {float: none;}
+  .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown-content {position: relative;}
+  .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown .dropbtn {
     display: block;
     width: 100%;
+    font-size: 15px;
+    padding: 10px 16px
   }
 }
 
@@ -477,9 +555,9 @@ position: relative;
 <body>
 
 
-<div class="Navigationair-bar">
+<div class="Navigationair-slidairbar">
 
-  <div class="Navigationair-bar-top">
+  <div class="Navigationair-slidairbar-top">
     <div class="flex align-items-center justify-space-between">
       <!--col 1-->
       <div class="bar-top-col">
@@ -518,14 +596,16 @@ position: relative;
   </div>
 
 
-<div class="navigation flex-wrap flex-grow" id="navigation">
-   <div class="nav_brand flex flex-wrap flex-grow">
+<div class="navigation flex-wrap" id="navigation">
+   <div class="nav_brand flex flex-wrap">
   <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
   <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
   <img src="images/logo.png" alt="logo" class="logo_img" />
 </div>
    <div class="brand_text">Brunique developers</div>
 </div>
+
+<div class="responsive-nav flex flex-wrap flex-grow justify-right" id="responsive-nav">
 
    <ul class="menu-nav" id="menu-nav">
   <li ><a class="active" href="#home">Home</a></li>
@@ -559,6 +639,8 @@ position: relative;
 <i class="ion ion-socials ion-social-youtube-outline"></i></a>
  <a class="navbar-brand-social-header" href="#" target="_blank" > 
 <i class="ion ion-socials ion-social-twitter-outline"></i></a>
+
+</div>
 
 </div>
 
@@ -596,20 +678,19 @@ position: relative;
 
 <script>
 function myFunction() {
-  var navx = document.querySelector('.navigation');
-  var x = document.getElementById("menu-nav");
-    var s = document.getElementById("nav_social_brands");
+var navx = document.querySelector('.navigation');
+  var x = document.querySelector(".responsive-nav");
 
-  
-  if (x.className === "menu-nav") {
-    navx.classList.add("h-auto");
-    x.className += " responsive";
-    s.className +=" show_social_nav";
-  } else {
-    navx.classList.remove("h-auto");
-    x.className = "menu-nav";
-    s.className ="nav_social_brands";
-    
+  if (x.classList.contains("responsive")) {
+      x.classList.remove("responsive");
+      navx.classList.remove("h-auto");
+      navx.classList.remove("shadow");
+
+  }else{
+   navx.classList.add("h-auto");
+    x.classList.add("responsive");
+    navx.classList.add("shadow");
+
   }
 }
 </script>
