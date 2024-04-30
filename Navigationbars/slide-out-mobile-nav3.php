@@ -65,6 +65,11 @@
 
 body {margin:0; font-family: Myriad-Regular;}
 
+.Navigationair-slidairbar ul, .Navigationair-slidairbar li {
+    list-style: none;
+    padding: revert;
+    margin: revert;
+}
   
   .Navigationair-slidairbar{
          position: fixed;
