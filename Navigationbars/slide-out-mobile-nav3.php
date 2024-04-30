@@ -107,13 +107,14 @@ body {margin:0; font-family: Myriad-Regular;}
     border-color: #ffffff;
       border: 1px solid transparent;
       border-bottom: 1px solid #f47d23 !important;
-      overflow: hidden; 
+      overflow: hidden;
+      font-family: Raleway-Bold; 
 }
 
 .Navigationair-slidairbar .responsive-nav{
         max-height: 48px;
     position: relative;
-    font-family: Raleway-Bold;
+    
   background-color: #fff;
 margin: 0;
 padding: 0;
@@ -238,16 +239,18 @@ height:100%;
     overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  height: 0px;
+  max-height: 0px;
  /*display: none;*/
   position: fixed;
   background-color: #f9f9f9;
   padding: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-
-    transform: translateY(2em);
-  transition: all 0.3s;
+  border-top: 1px solid #FF5722;
+   font-family: "Myriad-Regular";
+  transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.26s max-height, transform 0.4s ease;
 }
 
 .Navigationair-slidairbar .navigation ul.custom-dropdown-content li {
@@ -256,10 +259,13 @@ height:100%;
   text-decoration: none;
   display: block;
   text-align: left;
+  border-bottom: 1px solid #DADADA;
 }
 
 .Navigationair-slidairbar .navigation ul.custom-dropdown-content li a{
   color: #000;
+    padding: 10px 16px;
+    font-size: 15px;
 }
 
 .Navigationair-slidairbar .navigation .custom-dropdown:hover .dropbtn {
@@ -277,11 +283,10 @@ height:100%;
 
 .Navigationair-slidairbar .navigation .custom-dropdown:hover ul.custom-dropdown-content {
    /* display: block;*/
- height: auto;
+ max-height: 1000px;
  visibility: visible; 
   opacity: 1;
-  transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+  transform: scaleY(1);
 
 }
 
@@ -529,13 +534,20 @@ padding: 10px 16px;
 font-size: 15px;
 }
 
+.Navigationair-slidairbar #nav_social_brands.nav_social_brands {
+    justify-content: flex-start;
+}
+
   .Navigationair-slidairbar .navigation .nav_social_brands.show_social_nav{
     display: block;
     margin-left: 8px;
   }
 
+
+
    .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown ul li{
     margin-left: 0px;
+    border-bottom: 1px solid #009688;
   }
 
   .Navigationair-slidairbar .navigation .menu-nav .custom-dropdown {float: none;}

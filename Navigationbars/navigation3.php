@@ -198,6 +198,7 @@ height:100%;
 .Navigationair-bar .navigation .custom-dropdown {
   /*float: left;
   overflow: hidden;*/
+  
 }
 
 .Navigationair-bar .navigation .custom-dropdown .dropbtn {
@@ -214,7 +215,7 @@ height:100%;
     overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  height: 0px;
+  max-height: 0px;
  /*display: none;*/
   position: fixed;
   background-color: #f9f9f9;
@@ -224,6 +225,11 @@ height:100%;
 
     transform: translateY(2em);
   transition: all 0.3s;
+   border-top: 1px solid #FF5722;
+   font-family: "Myriad-Regular";
+     transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.26s max-height, transform 0.4s ease;
 }
 
 .Navigationair-bar .navigation ul.custom-dropdown-content li {
@@ -232,10 +238,14 @@ height:100%;
   text-decoration: none;
   display: block;
   text-align: left;
+      border-bottom: 1px solid #DADADA;
 }
 
 .Navigationair-bar .navigation ul.custom-dropdown-content li a{
   color: #000;
+      padding: 10px 16px;
+    font-size: 15px;
+
 }
 
 .Navigationair-bar .navigation .custom-dropdown:hover .dropbtn {
@@ -253,12 +263,10 @@ height:100%;
 
 .Navigationair-bar .navigation .custom-dropdown:hover ul.custom-dropdown-content {
    /* display: block;*/
- height: auto;
+ max-height: 1000px;
  visibility: visible; 
   opacity: 1;
-  transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-
+ transform: scaleY(1);
 }
 
 
@@ -430,15 +438,13 @@ position: relative;
     visibility: hidden;
     opacity: 0;*/
     transition: max-height 0.4s linear;
+      display: block;
+  font-family: "Myriad-Regular";
 }
 
 
   .Navigationair-bar .navigation .menu-nav.responsive {
-  /*  position: relative;
-   margin: 0;*/
-    /*max-height: 1000px;
-    visibility: visible;
-    opacity: 1;*/
+
   }
 
 .Navigationair-bar .navigation .icon {
@@ -452,6 +458,7 @@ position: relative;
     opacity: 1;
     margin-left: -40px;
       transition:visibility 0.2s linear,opacity 0.2s linear;
+      border-bottom: 1px solid #DADADA;
   }
   .Navigationair-bar .navigation .nav_social_brands.show_social_nav{
     display: block;
@@ -460,6 +467,12 @@ position: relative;
 
    .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown ul li{
     margin-left: 0px;
+    border-bottom: 1px solid #FF5722;
+  }
+
+  .Navigationair-bar .navigation ul.menu-nav li a{
+        padding: 10px 16px;
+    font-size: 15px;
   }
 
   .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown {float: none;}
@@ -467,6 +480,8 @@ position: relative;
   .Navigationair-bar .navigation .menu-nav.responsive .custom-dropdown .dropbtn {
     display: block;
     width: 100%;
+      font-size: 15px;
+    padding: 10px 16px
   }
 }
 
@@ -518,8 +533,8 @@ position: relative;
   </div>
 
 
-<div class="navigation flex-wrap flex-grow" id="navigation">
-   <div class="nav_brand flex flex-wrap flex-grow">
+<div class="navigation flex-wrap" id="navigation">
+   <div class="nav_brand flex flex-wrap">
   <!--<div class="logo_bg" style="background-image: url('{{ asset("storage/logos_images/".$Logoname) }}')"></div>-->
   <div class="logo_wrapper" id="logobrand" logourl="{{ asset('storage/logos_images/'.$Logoname) }}" brandtext="Brunique developers">
   <img src="images/logo.png" alt="logo" class="logo_img" />
@@ -527,7 +542,7 @@ position: relative;
    <div class="brand_text">Brunique developers</div>
 </div>
 
-   <ul class="menu-nav" id="menu-nav">
+   <ul class="menu-nav flex flex-wrap flex-grow justify-right" id="menu-nav">
   <li ><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
@@ -595,7 +610,7 @@ position: relative;
 </div>
 
 <script>
-function myFunction() {
+/*function myFunction() {
   var navx = document.querySelector('.navigation');
   var x = document.getElementById("menu-nav");
     var s = document.getElementById("nav_social_brands");
@@ -611,7 +626,29 @@ function myFunction() {
     s.className ="nav_social_brands";
     
   }
+}*/
+
+
+function myFunction() {
+var navx = document.querySelector('.navigation');
+  var x = document.querySelector(".menu-nav");
+  var s = document.getElementById("nav_social_brands");
+
+  if (x.classList.contains("responsive")) {
+      navx.classList.remove("h-auto");
+      x.classList.remove("responsive");
+      s.classList.remove("show_social_nav");
+
+  }else{
+   navx.classList.add("h-auto");
+    x.classList.add("responsive");
+    s.classList.add("show_social_nav");
+
+  }
 }
+
+
+
 </script>
 
 
